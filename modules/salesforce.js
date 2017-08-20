@@ -162,6 +162,25 @@ let createCase2 = (customerName, customerId) => {
     });
 };
 
+let createCase3 = (values, customerName, customerId) => {
+    return new Promise((resolve, reject) => {
+        let c = nforce.createSObject('Case');
+        c.set('subject', `Queja de usuario ${customerName} (Facebook Customer)`);
+        c.set('description', "Facebook id: " + customerId + "...." + values);
+        c.set('origin', 'Facebook Bot');
+        c.set('status', 'New');
+
+        org.insert({sobject: c}, err => {
+            if (err) {
+                console.error(err);
+                reject("An error occurred while creating a case");
+            } else {
+                resolve(c);
+            }
+        });
+    });
+};
+
 login();
 
 exports.org = org;
@@ -170,3 +189,4 @@ exports.findPropertiesByCategory = findPropertiesByCategory;
 exports.findPriceChanges = findPriceChanges;
 exports.createCase = createCase;
 exports.createCase2 = createCase2;
+exports.createCase3 = createCase3;
