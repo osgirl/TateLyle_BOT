@@ -68,3 +68,11 @@ exports.hola = (sender) => {   
         messenger.send({text: `Hola, ${response.first_name}!`}, sender);    
     });
 };
+
+exports.queja = (sender, values) => { 
+    messenger.getUserInfo(sender).then(response => { 
+        salesforce.createCase2(response.first_name + " " + response.first_name, sender).then(() => { 
+            messenger.send({text: `Gracias, ${response.first_name}. Una queja ha sido creada.`}, sender); 
+        }); 
+    }); 
+};
