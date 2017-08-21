@@ -148,7 +148,7 @@ exports.formatSucursal = sucursal => {
                 subtitle: `${sucursal.get("BillingCity")}`,
                 "buttons":[{
                     "type":"web_url",
-                    "url":"https://www.google.com.mx/maps/place/H-E-B+Contry/@25.6261449,-100.274875,15z/data=!4m5!3m4!1s0x0:0xfacdabf372954c90!8m2!3d25.6261449!4d-100.274875",
+                    "url": sucursal.HEB_Location__c,
                     "title":"View Ubication",
                     "webview_height_ratio": "compact"
                 },
