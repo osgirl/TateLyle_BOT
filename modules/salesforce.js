@@ -175,7 +175,8 @@ let findSucursal = (params) => {
     return new Promise((resolve, reject) => {        
         let q = `SELECT id,                    
                 Name,
-                Billingcity
+                Billingcity,
+                HEB_Front_Picture__c
                 FROM Account                
                 ${where}                
                 LIMIT 5`;        
