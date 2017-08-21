@@ -154,7 +154,7 @@ exports.formatSucursal = sucursal => {
                 },
 		{
                     "type": "postback",
-                    "title": "Quiz",
+                    "title": "Survey",
                     "payload": "contact_quiz," + sucursal.getId()
                 }]
             })       
@@ -174,10 +174,25 @@ exports.formatSucursal = sucursal => {
 exports.question_1 = broker => { 
     	let elements = []; 
 	elements.push({ 
-		Title: "What do you think of the customer service at the branch?"  
-
-
-    }); 
+		title: "What do you think about our Customer Service?",
+		"buttons": [ 
+			{ 
+				"type": "postback", 
+				 "title": "Good", 
+				 "payload": "contact_me" 
+			},
+			{ 
+				"type": "postback", 
+				 "title": "Regular", 
+				 "payload": "contact_me"
+				},
+			{ 
+				"type": "postback", 
+				 "title": "Bad", 
+				 "payload": "contact_me"
+			}
+		] 
+    	}); 
     return { 
         "attachment": { 
              "type": "template", 
