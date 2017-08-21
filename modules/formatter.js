@@ -171,7 +171,7 @@ exports.formatSucursal = sucursal => {
      };
 };
 
-exports.question_1 = broker => { 
+exports.question_1 = sucursal => { 
     	let elements = []; 
 	elements.push({ 
 		title: "1st Question",
@@ -180,17 +180,17 @@ exports.question_1 = broker => {
 			{ 
 				"type": "postback", 
 				 "title": "Good", 
-				 "payload": "quiz_1" 
+				 "payload": "quiz_1," + sucursal.getId(), + "Good" 
 			},
 			{ 
 				"type": "postback", 
 				 "title": "Regular", 
-				 "payload": "quiz_1"
+				 "payload": "quiz_1," + sucursal.getId(), + "Regular" 
 				},
 			{ 
 				"type": "postback", 
 				 "title": "Bad", 
-				 "payload": "quiz_1" 
+				 "payload": "quiz_1," + sucursal.getId(), + "Bad" 
 			}
 		] 
     	}); 
