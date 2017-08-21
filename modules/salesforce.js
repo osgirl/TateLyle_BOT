@@ -178,7 +178,8 @@ let findSucursal = (params) => {
                 Billingcity,
                 HEB_Front_Picture__c
                 FROM Account                
-                ${where}`;        
+                ${where}
+                LIMIT 5`;        
         org.query({query: q}, (err, resp) => {            
             if (err) {               
                 reject("An error as occurred");            
