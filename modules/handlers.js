@@ -83,11 +83,3 @@ exports.queja = (sender, values) => {
         }); 
     }); 
 };
-
-exports.queja_mensaje = (sender, values) => { 
-    messenger.getUserInfo(sender).then(response => { 
-        salesforce.createCase3(${values}, response.first_name + " " + response.first_name, sender).then(() => { 
-            messenger.send({text: `Gracias, ${response.first_name}. Una queja ha sido creada.`}, sender); 
-        }); 
-    }); 
-};
