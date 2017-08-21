@@ -178,7 +178,6 @@ exports.formatSucursal = sucursal => {
 
 exports.question_1 = sucursal => { 
     let elements = []; 
-	sucursal.forEach(sucursal => { 
 
 		elements.push({ 
 			Title: "What do you think of the customer service at the branch ${sucursal.get("Name")}?",  
@@ -186,20 +185,20 @@ exports.question_1 = sucursal => {
 				{ 
 					"type": "postback", 
 					 "title": "Good", 
-					 "payload": "quiz_1," + sucursal.getId(), + "Good"
+					 "payload": "quiz_1," + "Good"
 				},
 				{ 
 					"type": "postback", 
 					 "title": "Regular", 
-					 "payload": "quiz_1," + sucursal.getId(), + "Regular" 
+					 "payload": "quiz_1," + "Regular" 
 				},
 				{ 
 					"type": "postback", 
 					 "title": "Bad", 
-					 "payload": "quiz_1," sucursal.getId(), + "Bad" 
+					 "payload": "quiz_1," + "Bad" 
 				}
 			] 
-		})
+
     }); 
     return { 
         "attachment": { 
