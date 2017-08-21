@@ -218,4 +218,5 @@ exports.findPropertiesByCategory = findPropertiesByCategory;
 exports.findPriceChanges = findPriceChanges;
 exports.createCase = createCase;
 exports.createCase2 = createCase2;
+exports.createCase3 = createCase3;
 exports.findSucursal = findSucursal;
