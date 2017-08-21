@@ -162,27 +162,6 @@ let createCase2 = (customerName, customerId) => {
     });
 };
 
-let createCase3 = (accountId, respuesta, customerName, customerId) => {
-    return new Promise((resolve, reject) => {
-        let c = nforce.createSObject('Case');
-        c.set('subject', `Respuesta de usuario ${customerName} (Facebook Customer)`);
-        c.set('description', "La respuesta a la pregunta ¿Que te parecio la atencion al cliente en la sucursal?, fue: " + respuesta);
-        c.set('origin', 'Facebook Bot');
-        c.set('status', 'New');
-		c.set('AccountId', accountId);
-		
-
-        org.insert({sobject: c}, err => {
-            if (err) {
-                console.error(err);
-                reject("An error occurred while creating a case");
-            } else {
-                resolve(c);
-            }
-        });
-    });
-};
-
 let findSucursal = (params) => {   
     let where = "";    
     if (params) {        
