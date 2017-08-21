@@ -30,6 +30,11 @@ exports.contact_me = (sender, values) => {
 
 };
 
+exports.contact_quiz = (sender, values) => {
+    messenger.send({text: "Answer the next questions:"}, sender);
+    messenger.send(formatter.question_1(), sender);
+};
+
 exports.quiz_1 = (sender, values) => { 
     let branchId = values[1];
 	let answer_1 = values[2];
