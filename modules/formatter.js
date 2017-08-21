@@ -180,17 +180,17 @@ exports.question_1 = broker => {
 			{ 
 				"type": "postback", 
 				 "title": "Good", 
-				 "payload": "quiz_1," + "Good" 
+				 "payload": "quiz_1" 
 			},
 			{ 
 				"type": "postback", 
 				 "title": "Regular", 
-				 "payload": "quiz_1," + "Regular" 
+				 "payload": "quiz_1"
 				},
 			{ 
 				"type": "postback", 
 				 "title": "Bad", 
-				 "payload": "quiz_1," + "Bad"
+				 "payload": "quiz_1" 
 			}
 		] 
     	}); 
