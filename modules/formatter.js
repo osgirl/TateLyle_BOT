@@ -139,3 +139,23 @@ exports.formatBroker = broker => {
         }
     };
 };
+
+exports.formatSucursal = sucursal => {    
+    let elements = [];    
+    sucursal.forEach(sucursal => {            
+            elements.push({                
+                title: sucursal.get("Name"),                
+                subtitle: `${sucursal.get("BillingCity")}`            
+            })       
+        }    
+    );    
+     return {        
+         "attachment": {            
+             "type": "template",            
+             "payload": {                
+                 "template_type": "generic",                
+                 "elements": elements            
+             }        
+         }    
+     };
+};
