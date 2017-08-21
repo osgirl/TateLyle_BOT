@@ -25,6 +25,11 @@ exports.formatProperties = properties => {
                         "type": "postback",
                         "title": "Contact me",
                         "payload": "contact_me," + property.getId()
+                    },
+                    {
+                        "type": "postback",
+                        "title": "Encuesta",
+                        "payload": "encuesta," + property.getId()
                     }
                 ]
             })
@@ -166,3 +171,46 @@ exports.formatSucursal = sucursal => {
          }    
      };
 };
+
+exports.encuesta = encuesta => { 
+    let elements = []; 
+    elements.push({ 
+        Pregunta: "¿Que te parecio la atencion al cliente en la sucursal ${sucursal.get("Name")} ?",  
+        "buttons": [ 
+            { 
+                "type": "postback", 
+                 "title": "Buena", 
+                 "payload": "encuesta," + sucursal.get("Id"), + "Buena"
+            },
+			{ 
+                "type": "postback", 
+                 "title": "Regular", 
+                 "payload": "encuesta," + sucursal.get("Id"), + "Regular" 
+            },
+			{ 
+                "type": "postback", 
+                 "title": "Mala", 
+                 "payload": "encuesta," + sucursal.get("Id"), + "Mala" 
+            }] 
+    }); 
+    return { 
+        "attachment": { 
+             "type": "template", 
+             "payload": { 
+                "template_type": "generic", 
+                "elements": elements 
+            } 
+        } 
+    }; 
+}; 
+
+
+exports.encuesta = (sender, values) => { 
+    let sucursalId = values[1];
+	let respuesta = values[2];
+    messenger.getUserInfo(sender).then(response => { 
+        salesforce.createCase3(sucursalId, respuesta, response.first_name + " " + response.first_name, sender).then(() => { 
+            messenger.send({text: `Gracias por su respuesta, ${response.first_name}. Esta ha sido enviado a la sucursal.`}, sender); 
+        }); 
+    }); 
+}; 
