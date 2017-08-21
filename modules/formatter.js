@@ -148,15 +148,15 @@ exports.formatSucursal = sucursal => {
                 subtitle: `${sucursal.get("BillingCity")}`,
                 "buttons":[{
                     "type":"web_url",
-                    "url": sucursal.HEB_Location__c,
+                    "url": sucursal.get("HEB_Location__c"),
                     "title":"View Ubication",
                     "webview_height_ratio": "compact"
                 },
 		{
-                        "type": "postback",
-                        "title": "Quiz",
-                        "payload": "contact_quiz," + sucursal.getId()
-                    }]
+                    "type": "postback",
+                    "title": "Quiz",
+                    "payload": "contact_quiz," + sucursal.getId()
+                }]
             })       
         }    
     );    
@@ -198,7 +198,7 @@ exports.question_1 = broker => {
         "attachment": { 
              "type": "template", 
              "payload": { 
-                "template_type": "generic", 
+                "template_type": "button", 
                 "elements": elements 
             } 
         } 
