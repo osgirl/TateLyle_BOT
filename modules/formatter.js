@@ -174,7 +174,8 @@ exports.formatSucursal = sucursal => {
 exports.question_1 = broker => { 
     	let elements = []; 
 	elements.push({ 
-		title: "What do you think about our Customer Service?",
+		title: "1st Question",
+		subtitle: "What do you think about our Customer Service?",
 		"buttons": [ 
 			{ 
 				"type": "postback", 
@@ -197,7 +198,7 @@ exports.question_1 = broker => {
         "attachment": { 
              "type": "template", 
              "payload": { 
-                "template_type": "button", 
+                "template_type": "generic", 
                 "elements": elements 
             } 
         } 
