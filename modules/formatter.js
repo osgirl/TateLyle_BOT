@@ -29,7 +29,7 @@ exports.formatProperties = properties => {
                     {
                         "type": "postback",
                         "title": "Encuesta",
-                        "payload": "encuesta," + property.getId()
+                        "payload": "quiz_1," + property.getId()
                     }
                 ]
             })
@@ -169,5 +169,41 @@ exports.formatSucursal = sucursal => {
              }        
          }    
      };
+};
+
+exports.question_1 = sucursal => { 
+    let elements = []; 
+	sucursal.forEach(sucursal => { 
+
+		elements.push({ 
+			Title: "What do you think of the customer service at the branch ${sucursal.get("Name")}?",  
+			"buttons": [ 
+				{ 
+					"type": "postback", 
+					 "title": "Good", 
+					 "payload": "quiz_1," + sucursal.getId(), + "Good"
+				},
+				{ 
+					"type": "postback", 
+					 "title": "Regular", 
+					 "payload": "quiz_1," + sucursal.getId(), + "Regular" 
+				},
+				{ 
+					"type": "postback", 
+					 "title": "Bad", 
+					 "payload": "quiz_1," sucursal.getId(), + "Bad" 
+				}
+			] 
+		})
+    }); 
+    return { 
+        "attachment": { 
+             "type": "template", 
+             "payload": { 
+                "template_type": "generic", 
+                "elements": elements 
+            } 
+        } 
+    }; 
 };
 
