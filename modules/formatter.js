@@ -172,35 +172,3 @@ exports.formatSucursal = sucursal => {
      };
 };
 
-exports.encuesta = encuesta => { 
-    let elements = []; 
-    elements.push({ 
-        Pregunta: "¿Que te parecio la atencion al cliente en la sucursal ${sucursal.get("Name")} ?",  
-        "buttons": [ 
-            { 
-                "type": "postback", 
-                 "title": "Buena", 
-                 "payload": "encuesta," + sucursal.get("Id"), + "Buena"
-            },
-			{ 
-                "type": "postback", 
-                 "title": "Regular", 
-                 "payload": "encuesta," + sucursal.get("Id"), + "Regular" 
-            },
-			{ 
-                "type": "postback", 
-                 "title": "Mala", 
-                 "payload": "encuesta," + sucursal.get("Id"), + "Mala" 
-            }] 
-    }); 
-    return { 
-        "attachment": { 
-             "type": "template", 
-             "payload": { 
-                "template_type": "generic", 
-                "elements": elements 
-            } 
-        } 
-    }; 
-}; 
-
