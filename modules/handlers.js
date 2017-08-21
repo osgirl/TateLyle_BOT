@@ -84,10 +84,3 @@ exports.queja_mensaje = (sender, values) => {
         }); 
     }); 
 };
-
-exports.searchSucursal_City = (sender, values) => {    
-    messenger.send({text: `Sucursales en ${values[1]}`}, sender);    
-    salesforce.findSucursal({BillingCity: values[1]}).then(sucursal => {        
-        messenger.send(formatter.formatSucursal(sucursal), sender);    
-    });
-};
