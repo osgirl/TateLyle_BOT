@@ -12,7 +12,7 @@ exports.searchSucursal_City = (sender, values) => {       
 };
 
 exports.searchHouse = (sender) => {
-    messenger.send({text: `No estes chingando...`}, sender);
+    messenger.send({text: `Search Houses...`}, sender);
     salesforce.findProperties().then(properties => {
         messenger.send(formatter.formatProperties(properties), sender);
     });
