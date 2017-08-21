@@ -145,7 +145,7 @@ exports.formatSucursal = sucursal => {   
     sucursal.forEach(sucursal => {            
             elements.push({                
                 title: sucursal.get("Name"),                
-                subtitle: `${sucursal.get("BillingCity__c")}`            
+                subtitle: `${sucursal.get("BillingCity")}`            
             })       
         }    
     );    
