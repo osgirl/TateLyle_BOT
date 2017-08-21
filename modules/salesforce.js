@@ -176,7 +176,8 @@ let findSucursal = (params) => {
         let q = `SELECT id,                    
                 Name,
                 Billingcity,
-                HEB_Front_Picture__c
+                HEB_Front_Picture__c,
+                HEB_Location__c
                 FROM Account                
                 ${where}
                 LIMIT 5`;        
