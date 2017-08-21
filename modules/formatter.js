@@ -154,7 +154,7 @@ exports.formatSucursal = sucursal => {
                 },
 		{
                         "type": "postback",
-                        "title": "Encuesta",
+                        "title": "Quiz",
                         "payload": "contact_quiz," + sucursal.getId()
                     }]
             })       
@@ -171,7 +171,7 @@ exports.formatSucursal = sucursal => {
      };
 };
 
-exports.question_1 = sucursal => { 
+exports.question_1 = broker => { 
     	let elements = []; 
 	elements.push({ 
 		Title: "What do you think of the customer service at the branch?",  
