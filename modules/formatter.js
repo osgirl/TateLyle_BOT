@@ -174,7 +174,7 @@ exports.formatSucursal = sucursal => {
 exports.question_1 = sucursal => { 
     	let elements = []; 
 	elements.push({ 
-		Title: "What do you think of the customer service at the branch ${sucursal.get("Name")}?",  
+		Title: "What do you think of the customer service at the branch?",  
 		"buttons": [ 
 			{ 
 				"type": "postback", 
