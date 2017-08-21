@@ -175,23 +175,7 @@ exports.question_1 = broker => {
     	let elements = []; 
 	elements.push({ 
 		Title: "What do you think of the customer service at the branch?",  
-		"buttons": [ 
-			{ 
-				"type": "postback", 
-				 "title": "Good", 
-				 "payload": "contact_me"
-			},
-			{ 
-				"type": "postback", 
-				 "title": "Regular", 
-				 "payload": "contact_me"
-			},
-			{ 
-				"type": "postback", 
-				 "title": "Bad", 
-				 "payload": "contact_me"
-			}
-		] 
+
 
     }); 
     return { 
