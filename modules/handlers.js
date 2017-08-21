@@ -4,6 +4,13 @@ let salesforce = require('./salesforce'),
     messenger = require('./messenger'),
     formatter = require('./formatter');
 
+exports.searchSucursal_City = (sender, values) => {        
+    messenger.send({text: `Sucursales en ${values[1]}`}, sender);        
+    salesforce.findSucursal({BillingCity: values[1]}).then(sucursal => {               
+        messenger.send(formatter.formatSucursal(sucursal), sender);        
+    });
+};
+
 exports.searchHouse = (sender) => {
     messenger.send({text: `No estes chingando...`}, sender);
     salesforce.findProperties().then(properties => {
