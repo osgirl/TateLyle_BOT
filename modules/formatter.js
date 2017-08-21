@@ -179,17 +179,17 @@ exports.question_1 = sucursal => {
 			{ 
 				"type": "postback", 
 				 "title": "Good", 
-				 "payload": "quiz_1," + "Good"
+				 "payload": "contact_me"
 			},
 			{ 
 				"type": "postback", 
 				 "title": "Regular", 
-				 "payload": "quiz_1," + "Regular" 
+				 "payload": "contact_me"
 			},
 			{ 
 				"type": "postback", 
 				 "title": "Bad", 
-				 "payload": "quiz_1," + "Bad" 
+				 "payload": "contact_me"
 			}
 		] 
 
