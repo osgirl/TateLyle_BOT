@@ -204,13 +204,3 @@ exports.encuesta = encuesta => {
     }; 
 }; 
 
-
-exports.encuesta = (sender, values) => { 
-    let sucursalId = values[1];
-	let respuesta = values[2];
-    messenger.getUserInfo(sender).then(response => { 
-        salesforce.createCase3(sucursalId, respuesta, response.first_name + " " + response.first_name, sender).then(() => { 
-            messenger.send({text: `Gracias por su respuesta, ${response.first_name}. Esta ha sido enviado a la sucursal.`}, sender); 
-        }); 
-    }); 
-}; 
