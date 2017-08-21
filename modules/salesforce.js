@@ -191,6 +191,24 @@ let findSucursal = (params) => {
     });
 };
 
+let createQuiz = (accountId, answer, customerName, customerId) => {
+    return new Promise((resolve, reject) => {
+        let c = nforce.createSObject('Quiz__c');
+        c.set('name', `Respuesta de usuario ${customerName} (Facebook Customer)`);
+        c.set('question_1', answer);
+		c.set('AccountId__c', accountId);		
+
+        org.insert({sobject: c}, err => {
+            if (err) {
+                console.error(err);
+                reject("An error occurred while creating a case");
+            } else {
+                resolve(c);
+            }
+        });
+    });
+};
+
 
 
 login();
@@ -201,4 +219,5 @@ exports.findPropertiesByCategory = findPropertiesByCategory;
 exports.findPriceChanges = findPriceChanges;
 exports.createCase = createCase;
 exports.createCase2 = createCase2;
+exports.createQuiz = createQuiz;
 exports.findSucursal = findSucursal;
