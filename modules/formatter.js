@@ -25,11 +25,6 @@ exports.formatProperties = properties => {
                         "type": "postback",
                         "title": "Contact me",
                         "payload": "contact_me," + property.getId()
-                    },
-                    {
-                        "type": "postback",
-                        "title": "Encuesta",
-                        "payload": "quiz_1," + property.getId()
                     }
                 ]
             })
@@ -160,7 +155,7 @@ exports.formatSucursal = sucursal => {
 		{
                         "type": "postback",
                         "title": "Encuesta",
-                        "payload": "quiz_1," + sucursal.getId()
+                        "payload": "contact_quiz," + sucursal.getId()
                     }]
             })       
         }    
@@ -177,27 +172,26 @@ exports.formatSucursal = sucursal => {
 };
 
 exports.question_1 = sucursal => { 
-    let elements = []; 
-
-		elements.push({ 
-			Title: "What do you think of the customer service at the branch ${sucursal.get("Name")}?",  
-			"buttons": [ 
-				{ 
-					"type": "postback", 
-					 "title": "Good", 
-					 "payload": "quiz_1," + "Good"
-				},
-				{ 
-					"type": "postback", 
-					 "title": "Regular", 
-					 "payload": "quiz_1," + "Regular" 
-				},
-				{ 
-					"type": "postback", 
-					 "title": "Bad", 
-					 "payload": "quiz_1," + "Bad" 
-				}
-			] 
+    	let elements = []; 
+	elements.push({ 
+		Title: "What do you think of the customer service at the branch ${sucursal.get("Name")}?",  
+		"buttons": [ 
+			{ 
+				"type": "postback", 
+				 "title": "Good", 
+				 "payload": "quiz_1," + "Good"
+			},
+			{ 
+				"type": "postback", 
+				 "title": "Regular", 
+				 "payload": "quiz_1," + "Regular" 
+			},
+			{ 
+				"type": "postback", 
+				 "title": "Bad", 
+				 "payload": "quiz_1," + "Bad" 
+			}
+		] 
 
     }); 
     return { 
