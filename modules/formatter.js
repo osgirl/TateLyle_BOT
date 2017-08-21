@@ -146,13 +146,12 @@ exports.formatSucursal = sucursal => {
             elements.push({                
                 title: sucursal.get("Name"),                
                 subtitle: `${sucursal.get("BillingCity")}`,
-                "default_action": {
-                    "type": "web_url",
-                    "url": "https://www.google.com.mx",
-                    "messenger_extensions": true,
-                    "webview_height_ratio": "tall",
-                    "fallback_url": "https://www.google.com.mx"
-                }
+                "buttons":[{
+                    "type":"web_url",
+                    "url":"https://www.google.com.mx/maps",
+                    "title":"View Ubication",
+                    "webview_height_ratio": "compact"
+                }]
             })       
         }    
     );    
