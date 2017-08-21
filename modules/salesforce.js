@@ -186,7 +186,7 @@ let findSucursal = (params) => {   
     if (params) {        
         let parts = [];        
         if (params.id) parts.push(`id='${params.id}'`);        
-        if (params.city) parts.push(`city__c='${params.city}'`);     
+        if (params.Billingcity) parts.push(`BillingCity='${params.BillingCity}'`);     
         if (parts.length>0) {            
             where = "WHERE " + parts.join(' AND ');        
         }    
