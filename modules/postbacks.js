@@ -36,11 +36,10 @@ exports.contact_quiz = (sender, values) => {
 };
 
 exports.quiz_1 = (sender, values) => { 
-    let branchId = values[1];
-	let answer_1 = values[2];
+   	let branchId = values[1];
 	
 	messenger.getUserInfo(sender).then(response => { 
-		salesforce.createQuiz(branchId, answer_1, response.first_name + " " + response.first_name, sender).then(() => { 			
+		salesforce.createQuiz(branchId, response.first_name + " " + response.first_name, sender).then(() => { 			
 			messenger.send({text: `Thanks for your answer.`}, sender); 
 		}); 
 	});
