@@ -214,17 +214,46 @@ exports.question_2 = sucursal => {
 				{ 
 					"type": "postback", 
 					 "title": "High", 
-					 "payload": "quiz_1"
+					 "payload": "quiz_2"
 				},
 				{ 
 					"type": "postback", 
 					 "title": "Regular", 
-					 "payload": "quiz_1"
+					 "payload": "quiz_2"
 				},
 				{ 
 					"type": "postback", 
 					 "title": "Low", 
-					 "payload": "quiz_1"
+					 "payload": "quiz_2"
+				}
+			]  
+    }); 
+    return { 
+        "attachment": { 
+             "type": "template", 
+             "payload": { 
+                "template_type": "generic", 
+                "elements": elements 
+            } 
+        } 
+    }; 
+};
+
+exports.question_3 = sucursal => { 
+	let elements = []; 
+	elements.push({ 
+		title: "3rd Question",
+		subtitle: "Will you continue visiting us for future purchases?",
+		"buttons": [ 
+				{ 
+					"type": "postback", 
+					 "title": "Yes", 
+					 "payload": "quiz"
+				},
+				{ 
+					"type": "postback", 
+					 "title": "No", 
+					 "payload": "quiz"
 				}
 			]  
     }); 
