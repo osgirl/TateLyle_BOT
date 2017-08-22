@@ -180,17 +180,17 @@ exports.question_1 = sucursal => {
 			{ 
 				"type": "postback", 
 				 "title": "Good", 
-				 "payload": "quiz_1"
+				 "payload": "quiz_1," + sucursal.getId()
 			},
 			{ 
 				"type": "postback", 
 				 "title": "Regular", 
-				 "payload": "quiz_1"
+				 "payload": "quiz_1," + sucursal.getId()
 				},
 			{ 
 				"type": "postback", 
 				 "title": "Bad", 
-				 "payload": "quiz_1"
+				 "payload": "quiz_1," + sucursal.getId()
 			}
 		] 
     	}); 
