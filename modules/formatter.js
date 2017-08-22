@@ -205,3 +205,37 @@ exports.question_1 = sucursal => {
     }; 
 };
 
+exports.question_2 = results => { 
+    let elements = []; 
+	elements.push({ 
+		title: "2nd Question",
+		subtitle: "How do you rate our Store's costs?",
+		"buttons": [ 
+				{ 
+					"type": "postback", 
+					 "title": "High", 
+					 "payload": "quiz_2," + results[1] "," + results[2]+ ",High"
+				},
+				{ 
+					"type": "postback", 
+					 "title": "Regular", 
+					 "payload": "quiz_2," + results[1] "," + results[2]+ ",Regular" 
+				},
+				{ 
+					"type": "postback", 
+					 "title": "Low", 
+					 "payload": "quiz_2," + results[1] "," + results[2]+ ",Low" 
+				}
+			]  
+    }); 
+    return { 
+        "attachment": { 
+             "type": "template", 
+             "payload": { 
+                "template_type": "generic", 
+                "elements": elements 
+            } 
+        } 
+    }; 
+};
+
