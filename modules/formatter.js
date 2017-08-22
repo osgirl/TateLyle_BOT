@@ -155,7 +155,7 @@ exports.formatSucursal = sucursal => {
 		{
                     "type": "postback",
                     "title": "Survey",
-                    "payload": "contact_quiz," + sucursal.getId()
+                    "payload": "contact_quiz"
                 }]
             })       
         }    
