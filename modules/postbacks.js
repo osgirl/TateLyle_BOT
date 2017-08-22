@@ -36,7 +36,9 @@ exports.contact_quiz = (sender, values) => {
 };
 
 exports.quiz_1 = (sender, values) => { 
-	messenger.send(formatter.question_2(values[1]), sender);
+	let test = [];
+	test[0] = values[1];
+	messenger.send(formatter.question_2(test), sender);
 };
 
 
