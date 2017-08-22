@@ -206,7 +206,7 @@ exports.question_1 = sucursal => {
 };
 
 exports.question_2 = results => { 
-    let test = results;
+    let test = results[1];
 	let elements = []; 
 	elements.push({ 
 		title: `2nd Question at ${test}`,
