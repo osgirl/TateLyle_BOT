@@ -33,6 +33,7 @@ exports.contact_me = (sender, values) => {
 exports.contact_quiz = (sender, values) => {
 	console.log(JSON.stringify(sender));
 	console.log(JSON.stringify(values));
+	messenger.send({text: `OK, ${values[1]}.`}, sender);
     messenger.send({text: "Answer the next questions:"}, sender);
     messenger.send(formatter.question_1(), sender);
 };
@@ -40,6 +41,7 @@ exports.contact_quiz = (sender, values) => {
 exports.quiz_1 = (sender, values) => { 
 	console.log(JSON.stringify(sender));
 	console.log(JSON.stringify(values));
+	messenger.send({text: `OK, ${values[1]}.`}, sender);
 	messenger.send(formatter.question_2(), sender);
 };
 
