@@ -180,7 +180,7 @@ exports.question_1 = sucursal => {
 			{ 
 				"type": "postback", 
 				 "title": "Good", 
-				 "payload": "quiz_1," + sucursal.getId()
+				 "payload": "quiz_1," + JSON.stringify(sucursal)
 			},
 			{ 
 				"type": "postback", 
