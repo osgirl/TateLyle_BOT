@@ -182,17 +182,17 @@ exports.question_1 = sucursal => {
 			{ 
 				"type": "postback", 
 				 "title": "Good", 
-				 "payload": "quiz_1," + myglobalvariable
+				 "payload": "quiz_1," + "Good"
 			},
 			{ 
 				"type": "postback", 
 				 "title": "Regular", 
-				 "payload": "quiz_1"
+				 "payload": "quiz_1," + "Regular"
 				},
 			{ 
 				"type": "postback", 
 				 "title": "Bad", 
-				 "payload": "quiz_1"
+				 "payload": "quiz_1," + "Bad"
 			}
 		] 
     	}); 
@@ -216,17 +216,17 @@ exports.question_2 = sucursal => {
 				{ 
 					"type": "postback", 
 					 "title": "High", 
-					 "payload": "quiz_2"
+					 "payload": "quiz_2," + "High"
 				},
 				{ 
 					"type": "postback", 
 					 "title": "Regular", 
-					 "payload": "quiz_2"
+					 "payload": "quiz_2," + "Regular"
 				},
 				{ 
 					"type": "postback", 
 					 "title": "Low", 
-					 "payload": "quiz_2"
+					 "payload": "quiz_2," + "Low"
 				}
 			]  
     }); 
@@ -250,12 +250,12 @@ exports.question_3 = sucursal => {
 				{ 
 					"type": "postback", 
 					 "title": "Yes", 
-					 "payload": "quiz"
+					 "payload": "quiz," + "Yes"
 				},
 				{ 
 					"type": "postback", 
 					 "title": "No", 
-					 "payload": "quiz"
+					 "payload": "quiz," + "No"
 				}
 			]  
     }); 
