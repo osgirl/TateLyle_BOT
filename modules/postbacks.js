@@ -31,6 +31,8 @@ exports.contact_me = (sender, values) => {
 };
 
 exports.contact_quiz = (sender, values) => {
+	console.log(JSON.stringify(sender));
+	console.log(JSON.stringify(values));
     messenger.send({text: "Answer the next questions:"}, sender);
     messenger.send(formatter.question_1(), sender);
 };
