@@ -39,4 +39,11 @@ exports.quiz_1 = (sender, values) => {
 	messenger.send(formatter.question_2(), sender);
 };
 
+exports.quiz_2 = (sender, values) => { 
+	messenger.send(formatter.question_3(), sender);
+};
+
+exports.quiz = (sender, values) => { 
+	messenger.send({text: "Thanks"}, sender);
+};
 
