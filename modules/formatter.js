@@ -205,11 +205,10 @@ exports.question_1 = sucursal => {
     }; 
 };
 
-exports.question_2 = results => { 
-    let test = results;
+exports.question_2 = sucursal => { 
 	let elements = []; 
 	elements.push({ 
-		title: `2nd Question at ${test}`,
+		title: `2nd Question at ${sucursal.getId()}`,
 		subtitle: "How do you rate our Store's costs?",
 		"buttons": [ 
 				{ 
