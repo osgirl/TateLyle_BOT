@@ -3,7 +3,7 @@
 let salesforce = require('./salesforce'),
     messenger = require('./messenger'),
     formatter = require('./formatter');
-
+let global_variable = [];
 exports.schedule_visit = (sender, values) => {
     salesforce.findProperties({id: values[1]}).then(properties => {
         messenger.send(formatter.formatAppointment(properties[0]), sender);
@@ -31,25 +31,25 @@ exports.contact_me = (sender, values) => {
 };
 
 exports.contact_quiz = (sender, values) => {
-	console.log(JSON.stringify(sender));
-	console.log(JSON.stringify(values));
+	global_variable[0] = values[1];
 	messenger.send({text: `OK, ${values[1]}.`}, sender);
     messenger.send({text: "Answer the next questions:"}, sender);
     messenger.send(formatter.question_1(), sender);
 };
 
 exports.quiz_1 = (sender, values) => { 
-	console.log(JSON.stringify(sender));
-	console.log(JSON.stringify(values));
+	global_variable[1] = values[1];
 	messenger.send({text: 'OK, '+JSON.stringify(values)+'.'}, sender);
 	messenger.send(formatter.question_2(), sender);
 };
 
 exports.quiz_2 = (sender, values) => { 
+	global_variable[2] = values[1];
 	messenger.send(formatter.question_3(), sender);
 };
 
 exports.quiz = (sender, values) => { 
-	messenger.send({text: "Thanks"}, sender);
+	global_variable[3] = values[1];
+	messenger.send({text: "Thanks" + global_variable.toString()}, sender);
 };
 
