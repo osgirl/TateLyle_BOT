@@ -38,7 +38,7 @@ exports.contact_quiz = (sender, values) => {
 exports.quiz_1 = (sender, values) => { 
 	let propertyId = values[1];
 	messenger.send({text: `Test ${propertyId}.`}, sender);
-	messenger.send(formatter.question_2(propertyId), sender);
+	messenger.send(formatter.question_2(), sender);
 };
 
 
