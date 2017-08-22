@@ -205,5 +205,37 @@ exports.question_1 = sucursal => {
     }; 
 };
 
-
+exports.question_2 = results => { 
+    let elements = []; 
+	elements.push({ 
+		title: "2nd Question - ${results}",
+		subtitle: "How do you rate our Store's costs?",
+		"buttons": [ 
+				{ 
+					"type": "postback", 
+					 "title": "High", 
+					 "payload": "quiz_1"
+				},
+				{ 
+					"type": "postback", 
+					 "title": "Regular", 
+					 "payload": "quiz_1"
+				},
+				{ 
+					"type": "postback", 
+					 "title": "Low", 
+					 "payload": "quiz_1"
+				}
+			]  
+    }); 
+    return { 
+        "attachment": { 
+             "type": "template", 
+             "payload": { 
+                "template_type": "generic", 
+                "elements": elements 
+            } 
+        } 
+    }; 
+};
 
