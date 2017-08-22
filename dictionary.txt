@@ -13,4 +13,4 @@ priceChanges price changes
 hi Hola
 help help
 queja crear queja
-searchSucursal_City en (.*)
+searchSucursal_City in (.*)
