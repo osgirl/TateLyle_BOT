@@ -206,9 +206,10 @@ exports.question_1 = sucursal => {
 };
 
 exports.question_2 = results => { 
-    let elements = []; 
+    let test = results;
+	let elements = []; 
 	elements.push({ 
-		title: `2nd Question at ${results}`,
+		title: `2nd Question at ${test}`,
 		subtitle: "How do you rate our Store's costs?",
 		"buttons": [ 
 				{ 
