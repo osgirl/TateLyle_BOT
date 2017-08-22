@@ -191,11 +191,14 @@ let findSucursal = (params) => {
     });
 };
 
-let createQuiz = (accountId, customerName, customerId) => {
+let createQuiz = (answers, customerName, customerId) => {
     return new Promise((resolve, reject) => {
         let c = nforce.createSObject('Quiz__c');
         c.set('Name', `Respuesta de usuario ${customerName} (Facebook Customer)`);
-	c.set('AccountId__c', accountId);		
+	    c.set('question_1__c', answers[1]);
+	    c.set('question_2__c', answers[2]);
+	    c.set('question_3__c', answers[3]);
+	c.set('AccountId__c', answers[0]);		
 
         org.insert({sobject: c}, err => {
             if (err) {
