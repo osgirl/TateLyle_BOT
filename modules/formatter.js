@@ -3,6 +3,8 @@
 let moment = require("moment"),
     numeral = require("numeral");
 
+let myglobalvariable = 'soy una variable global';
+
 exports.formatProperties = properties => {
     let elements = [];
     properties.forEach(property => {
@@ -180,7 +182,7 @@ exports.question_1 = sucursal => {
 			{ 
 				"type": "postback", 
 				 "title": "Good", 
-				 "payload": "quiz_1," + "Good"
+				 "payload": "quiz_1," + myglobalvariable
 			},
 			{ 
 				"type": "postback", 
