@@ -151,7 +151,7 @@ exports.formatSucursal = sucursal => {
 		"image_url": sucursal.get("HEB_Front_Picture__c"),
                 "buttons":[{
                     "type":"web_url",
-                    "url": `${sucursal.get("HEB_Location__c")}`,
+                    "url": "www.google.com",
                     "title":"View Ubication",
                     "webview_height_ratio": "compact"
                 },
