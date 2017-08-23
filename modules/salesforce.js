@@ -162,8 +162,16 @@ let createCase2 = (customerName, customerId) => {
     });
 };
 
-let findSucursal = (city) => {   
-     
+let findSucursal = (params) => {   
+    let where = "";
+    if (params) {
+        let parts = [];
+        if (params.id) parts.push(`id='${params.id}'`);
+        if (params.city) parts.push(`HEB_City__c='${params.city}'`);
+        if (parts.length>0) {
+            where = "WHERE " + parts.join(' AND ');
+        }
+    } 
     return new Promise((resolve, reject) => {        
         let q = `SELECT id,                    
                 Name,
@@ -172,7 +180,7 @@ let findSucursal = (city) => {
                 HEB_Location__c,
 		HEB_City__c
                 FROM Account                
-                WHERE HEB_Location__c = '${city}'
+                ${where}
                 LIMIT 5`;        
         org.query({query: q}, (err, resp) => {            
             if (err) {               
