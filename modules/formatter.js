@@ -149,7 +149,7 @@ exports.formatSucursal = sucursal => {
 		"image_url": sucursal.get("HEB_Front_Picture__c"),
                 "buttons":[{
                     "type":"web_url",
-                    "url": sucursal.get("HEB_Location__c"),
+                    "url": "https://www.google.com.mx/maps/place/H-E-B+Grocery/@25.6261449,-100.274875,15z/data=!4m5!3m4!1s0x0:0xfacdabf372954c90!8m2!3d25.6261449!4d-100.274875",
                     "title":"View Ubication",
                     "webview_height_ratio": "compact"
                 },
