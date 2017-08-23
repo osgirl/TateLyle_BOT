@@ -6,7 +6,7 @@ let salesforce = require('./salesforce'),
 
 exports.searchSucursal_City = (sender, values) => {        
     messenger.send({text: `Stores in ${values[1]}`}, sender);        
-    salesforce.findSucursal({BillingCity: values[1]}).then(sucursal => {               
+    salesforce.findSucursal({city: values[1]}).then(sucursal => {               
         messenger.send(formatter.formatSucursal(sucursal), sender);        
     });
 };
