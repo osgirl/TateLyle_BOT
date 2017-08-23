@@ -143,15 +143,17 @@ exports.formatBroker = broker => {
 };
 
 exports.formatSucursal = sucursal => {    
-    let elements = [];    
+    let elements = [];
+	
     sucursal.forEach(sucursal => {            
-            elements.push({                
+            var location = sucursal.get("HEB_Location__c");
+	    elements.push({                
                 title: sucursal.get("Name"),                
                 subtitle: `${sucursal.get("Billingcity")}`,
 		"image_url": sucursal.get("HEB_Front_Picture__c"),
                 "buttons":[{
                     "type":"web_url",
-                    "url": sucursal.get("HEB_Location__c"),
+                    "url": location + "",
                     "title":"View Ubication",
                     "webview_height_ratio": "compact"
                 },
