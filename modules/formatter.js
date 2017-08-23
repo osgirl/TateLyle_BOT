@@ -3,8 +3,6 @@
 let moment = require("moment"),
     numeral = require("numeral");
 
-let myglobalvariable = 'soy una variable global';
-
 exports.formatProperties = properties => {
     let elements = [];
     properties.forEach(property => {
@@ -143,17 +141,15 @@ exports.formatBroker = broker => {
 };
 
 exports.formatSucursal = sucursal => {    
-    let elements = [];
-	
+    let elements = [];	
     sucursal.forEach(sucursal => {            
-            var location = sucursal.get("HEB_Location__c");
 	    elements.push({                
                 title: sucursal.get("Name"),                
                 subtitle: `${sucursal.get("Billingcity")}`,
 		"image_url": sucursal.get("HEB_Front_Picture__c"),
                 "buttons":[{
                     "type":"web_url",
-                    "url": location + "",
+                    "url": "" + sucursal.get("HEB_Location__c") + "",
                     "title":"View Ubication",
                     "webview_height_ratio": "compact"
                 },
