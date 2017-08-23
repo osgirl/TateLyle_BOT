@@ -176,8 +176,8 @@ exports.formatSucursal = sucursal => {
 exports.question_1 = sucursal => { 
     	let elements = []; 
 	elements.push({ 
-		title: "1st Question",
-		subtitle: "What do you think about our Customer Service?",
+		title: "What do you think about our Customer Service?",
+		subtitle: "1st Question",
 		"buttons": [ 
 			{ 
 				"type": "postback", 
@@ -210,8 +210,8 @@ exports.question_1 = sucursal => {
 exports.question_2 = sucursal => { 
 	let elements = []; 
 	elements.push({ 
-		title: "2nd Question",
-		subtitle: "How do you rate our Store's costs?",
+		title: "How do you rate our Store's costs?",
+		subtitle: "2nd Question",
 		"buttons": [ 
 				{ 
 					"type": "postback", 
@@ -244,8 +244,8 @@ exports.question_2 = sucursal => {
 exports.question_3 = sucursal => { 
 	let elements = []; 
 	elements.push({ 
-		title: "3rd Question",
-		subtitle: "Will you continue visiting us for future purchases?",
+		title: "Will you continue visiting us for future purchases?",
+		subtitle: "3rd Question",
 		"buttons": [ 
 				{ 
 					"type": "postback", 
