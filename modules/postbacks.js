@@ -32,7 +32,7 @@ exports.contact_me = (sender, values) => {
 
 exports.contact_quiz = (sender, values) => {
 	global_variable[0] = values[1];
-    	messenger.send({text: "Answer the next questions:"}, sender);
+    	messenger.send({text: "Please share your experience in our HEB Store."}, sender);
     	messenger.send(formatter.question_1(), sender);
 };
 
@@ -50,9 +50,8 @@ exports.quiz = (sender, values) => {
 	global_variable[3] = values[1];
 	messenger.getUserInfo(sender).then(response => { 
 		salesforce.createQuiz(global_variable, response.first_name + " " + response.first_name, sender).then(() => { 			
-			messenger.send({text: `Thanks for your answer.`}, sender); 
+			messenger.send({text: `Thanks for your answers.`}, sender); 
 		}); 
 	});
-	messenger.send({text: "Thanks" + global_variable.toString()}, sender);
 };
 
