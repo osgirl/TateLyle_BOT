@@ -254,3 +254,4 @@ exports.createCase = createCase;
 exports.createCase2 = createCase2;
 exports.createQuiz = createQuiz;
 exports.findSucursal = findSucursal;
+exports.searchProducts = searchProducts;
