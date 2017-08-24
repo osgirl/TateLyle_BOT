@@ -9,6 +9,14 @@ exports.searchSucursal_City = (sender, values) => {       
     salesforce.findSucursal({city: values[1]}).then(sucursal => {               
         messenger.send(formatter.formatSucursal(sucursal), sender);        
     });
+}; 
+
+exports.searchProducts_Offers = (sender, values) => {        
+    messenger.send({text: `Products in Offer`}, sender);
+    values[1] = "True";
+    salesforce.searchProducts({offer: values[1]}).then(product => {               
+        messenger.send(formatter.formatproduct(product), sender);        
+    });
 };
 
 exports.searchHouse = (sender) => {
@@ -19,7 +27,7 @@ exports.searchHouse = (sender) => {
 };
 
 exports.searchHouse_City = (sender, values) => {
-    messenger.send({text: `OK, Buscando casas en ${values[1]}`}, sender);
+    messenger.send({text: `OK, Searching Houses in ${values[1]}`}, sender);
     salesforce.findProperties({city: values[1]}).then(properties => {
         messenger.send(formatter.formatProperties(properties), sender);
     });
