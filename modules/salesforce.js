@@ -199,7 +199,7 @@ let searchProducts = (params) => {
     if (params) {
         let parts = [];
         if (params.id) parts.push(`id='${params.id}'`);
-        if (params.offer) parts.push(`HEB_In_Offer__c='${params.offer}'`);
+        //if (params.offer) parts.push(`HEB_In_Offer__c='${params.offer}'`);
         if (parts.length>0) {
             where = "WHERE " + parts.join(' AND ');
         }
