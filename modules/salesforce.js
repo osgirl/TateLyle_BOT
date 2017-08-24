@@ -194,6 +194,34 @@ let findSucursal = (params) => {
     });
 };
 
+let searchProducts = (params) => {   
+    let where = "";
+    if (params) {
+        let parts = [];
+        if (params.id) parts.push(`id='${params.id}'`);
+        if (params.offer) parts.push(`HEB_In_Offer__c='${params.offer}'`);
+        if (parts.length>0) {
+            where = "WHERE " + parts.join(' AND ');
+        }
+    } 
+    return new Promise((resolve, reject) => {        
+        let q = `SELECT id,                    
+                Name,
+		HEB_In_Offer__c,
+		HEB_Product_Name__c,
+                FROM HEB_Products__c                
+                ${where}
+                LIMIT 5`;        
+        org.query({query: q}, (err, resp) => {            
+            if (err) {               
+                reject("An error as occurred");            
+            } else {               
+                resolve(resp.records);            
+            }        
+        });    
+    });
+};
+
 let createQuiz = (answers, customerName, customerId) => {
     return new Promise((resolve, reject) => {
         let c = nforce.createSObject('Quiz__c');
