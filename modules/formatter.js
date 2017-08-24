@@ -147,9 +147,6 @@ exports.formatSucursal = sucursal => {
                 title: sucursal.get("Name"),                
                 subtitle: `${sucursal.get("BillingCity")}, ${sucursal.get("BillingStreet")}`,
 		"image_url": sucursal.get("HEB_Front_Picture__c"),
-		"message":{
-		    "text": `${sucursal.get("Phone")}`
-		},
                 "buttons":[{
                     "type":"web_url",
                     "url": sucursal.get("HEB_Location__c"),
