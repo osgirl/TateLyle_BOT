@@ -174,7 +174,7 @@ exports.formatSucursal = sucursal => {
 
 exports.formatproduct = product => {    
     let elements = [];	
-    sucursal.forEach(product => {            
+    product.forEach(product => {            
 	    elements.push({                
                 title: product.get("Name"),                
                 subtitle: `${product.get("Name")}`,
