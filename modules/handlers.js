@@ -11,10 +11,9 @@ exports.searchSucursal_City = (sender, values) => {       
     });
 }; 
 
-exports.searchProducts_Offers = (sender, values) => {        
-    messenger.send({text: `Products in Offer`}, sender);
-    values[1] = "True";
-    salesforce.searchProducts({offer: values[1]}).then(product => {               
+exports.searchProducts_Offers = (sender) => {        
+    messenger.send({text: `Products in Offer`}, sender);    
+    salesforce.searchProducts().then(product => {               
         messenger.send(formatter.formatproduct(product), sender);        
     });
 };
