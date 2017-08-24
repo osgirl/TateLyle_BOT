@@ -172,6 +172,26 @@ exports.formatSucursal = sucursal => {
      };
 };
 
+exports.formatproduct = product => {    
+    let elements = [];	
+    sucursal.forEach(product => {            
+	    elements.push({                
+                title: product.get("Name"),                
+                subtitle: `${product.get("Name")}`,
+            })       
+        }    
+    );    
+     return {        
+         "attachment": {            
+             "type": "template",            
+             "payload": {                
+                 "template_type": "generic",                
+                 "elements": elements            
+             }        
+         }    
+     };
+};
+
 exports.question_1 = sucursal => { 
     	let elements = []; 
 	elements.push({ 
