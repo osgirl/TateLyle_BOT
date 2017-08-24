@@ -177,7 +177,6 @@ let findSucursal = (params) => {
                 Name,
 		BillingStreet,
 		Phone,
-                Billingcity,
                 HEB_Front_Picture__c,
                 HEB_Location__c,
 		HEB_City__c
