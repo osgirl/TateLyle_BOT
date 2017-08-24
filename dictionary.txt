@@ -13,3 +13,4 @@ hi Hola
 help help
 queja crear queja
 searchSucursal_City in (.*)
+searchProducts_Offers with (.*)
