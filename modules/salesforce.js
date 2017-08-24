@@ -175,7 +175,8 @@ let findSucursal = (params) => {
     return new Promise((resolve, reject) => {        
         let q = `SELECT id,                    
                 Name,
-		BillingCity,		
+		BillingCity,
+		BillingStreet,
 		Phone,
                 HEB_Front_Picture__c,
                 HEB_Location__c,
