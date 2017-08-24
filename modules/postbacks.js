@@ -49,7 +49,7 @@ exports.quiz_2 = (sender, values) => {
 exports.quiz = (sender, values) => { 
 	global_variable[3] = values[1];
 	messenger.getUserInfo(sender).then(response => { 
-		salesforce.createQuiz(global_variable, response.first_name + " " + response.first_name, sender).then(() => { 			
+		salesforce.createQuiz(global_variable, response.first_name + " " + response.last_name, sender).then(() => { 			
 			messenger.send({text: `Thank you for answering our survey. Your comments are very much appreciated.`}, sender); 
 		}); 
 	});
