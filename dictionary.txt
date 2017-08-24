@@ -9,7 +9,7 @@ searchHouse looking for house
 searchHouse find house
 searchHouse for sale
 priceChanges price changes
-hi Hola
+hi hi
 help help
 queja crear queja
 searchSucursal_City in (.*)
