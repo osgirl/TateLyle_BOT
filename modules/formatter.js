@@ -47,7 +47,7 @@ exports.formatPriceChanges = priceChanges => {
             let property = priceChange.get("Parent");
             elements.push({
                 title: `${property.Address__c}, ${property.City__c} ${property.State__c}`,
-                subtitle: `Old price: ${numeral(priceChange.get("OldValue")).format('$0,0')} · New price: ${numeral(priceChange.get("NewValue")).format('$0,0')} on ${moment(priceChange.get("CreatedDate")).format("MMM Do")}`,
+                subtitle: `Old price: ${numeral(priceChange.get("OldValue")).format('$0,0')} · New price: ${numeral(priceChange.get("NewValue")).format('$0,0')} on ${moment(priceChange.get("CreatedDate")).format("MMM Do")}`,		
                 "image_url": property.Picture__c,
                 "buttons": [
                     {
@@ -146,8 +146,10 @@ exports.formatSucursal = sucursal => {
 	    elements.push({                
                 title: sucursal.get("Name"),                
                 subtitle: `${sucursal.get("BillingCity")}, ${sucursal.get("BillingStreet")}`,
-	    	"text": sucursal.get("Phone"),
 		"image_url": sucursal.get("HEB_Front_Picture__c"),
+		"message":{
+		    "text":sucursal.get("Phone")
+		},
                 "buttons":[{
                     "type":"web_url",
                     "url": sucursal.get("HEB_Location__c"),
