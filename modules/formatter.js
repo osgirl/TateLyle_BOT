@@ -145,7 +145,7 @@ exports.formatSucursal = sucursal => {
     sucursal.forEach(sucursal => {            
 	    elements.push({                
                 title: sucursal.get("Name"),                
-                subtitle: `${sucursal.get("Billingcity")} ${sucursal.get("Phone")}`,
+                subtitle: `${sucursal.get("Billingcity")}`,
 		"image_url": sucursal.get("HEB_Front_Picture__c"),
                 "buttons":[{
                     "type":"web_url",
