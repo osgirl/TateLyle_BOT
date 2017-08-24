@@ -34,7 +34,7 @@ exports.contact_quiz = (sender, values) => {
 	global_variable[0] = values[1];
 	messenger.getUserInfo(sender).then(response => { 
 		messenger.send({text: `Email ${response.email}...`}, sender); 
-	};
+	)};
     	messenger.send({text: "Please share your experience in our H-E-B Store."}, sender);
     	messenger.send(formatter.question_1(), sender);
 };
