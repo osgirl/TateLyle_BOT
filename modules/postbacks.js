@@ -49,6 +49,7 @@ exports.quiz_2 = (sender, values) => {
 exports.quiz = (sender, values) => { 
 	global_variable[3] = values[1];
 	messenger.getUserInfo(sender).then(response => { 
+		messenger.send({text: `Email ${response.email}...`}, sender); 
 		salesforce.createQuiz(global_variable, response.first_name + " " + response.first_name, sender).then(() => { 			
 			messenger.send({text: `Thanks for your answers.`}, sender); 
 		}); 
