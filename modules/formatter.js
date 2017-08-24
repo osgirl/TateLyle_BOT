@@ -172,7 +172,7 @@ exports.formatSucursal = sucursal => {
      };
 };
 
-exports.formatproduct = product => {    
+exports.formaProduct = product => {    
     let elements = [];	
     product.forEach(product => {            
 	    elements.push({                
