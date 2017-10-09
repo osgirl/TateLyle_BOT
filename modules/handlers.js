@@ -40,6 +40,8 @@ exports.help = (sender) => {
 
 exports.answerSurvey = (sender, values) => {        
     messenger.send({text: `Survey for Ticket ${values[1]}`}, sender);
-    messenger.send({text: `Survey for Example ${values[1]}`}, sender);
+    salesforce.startSurvey(values[1]).then(survey => {               
+        messenger.send(formatter.TAL_Question_1(values[1]), sender);        
+    });
 };//End Tate And Lyle Code ************************** End Tate And Lyle Code*/
 
