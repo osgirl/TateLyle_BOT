@@ -4,7 +4,7 @@ let salesforce = require('./salesforce'),
     messenger = require('./messenger'),
     formatter = require('./formatter');
 
-exports.hi = (sender) => {
+/*exports.hi = (sender) => {
     messenger.getUserInfo(sender).then(response => {
         messenger.send({text: `Hello, ${response.first_name}!`}, sender);
     });
@@ -28,7 +28,7 @@ exports.searchProducts_Offers = (sender) => {       
     });
 };//End HEB Code ************************** End HEB Code*/
 
-/*exports.hi = (sender) => {
+exports.hi = (sender) => {
     messenger.getUserInfo(sender).then(response => {
         messenger.send({text: `Hello, ${response.first_name}!`}, sender);
     });
@@ -36,4 +36,12 @@ exports.searchProducts_Offers = (sender) => {       
 
 exports.help = (sender) => {
     messenger.send({text: `You can ask me questions like "Survey Ticket 1234", "Ticket 1234"`}, sender);
+};
+
+exports.answerSurvey = (sender, values) => {        
+    messenger.send({text: `Survey Ticket ${values[1]}`}, sender);        
+    salesforce.createSurvey({ticket: values[1]}).then(ticket => {               
+        messenger.send(formatter.TAL_Question_1(ticket), sender);        
+    });
 };//End Tate And Lyle Code ************************** End Tate And Lyle Code*/
+
