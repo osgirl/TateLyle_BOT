@@ -39,7 +39,9 @@ exports.help = (sender) => {
 };
 
 exports.answerSurvey = (sender, values) => {        
-    messenger.send({text: `Survey for Ticket ${values[1]}`}, sender);   
-    //postbacks.start_quiz() + values[1];
+    messenger.send({text: `Survey for Ticket ${values[1]}`}, sender);  
+    messenger.getUserInfo(sender).then(response => {
+        messenger.send(formatter.TAL_Question_1(values[1]), sender); 
+    });
 };//End Tate And Lyle Code ************************** End Tate And Lyle Code*/
 
