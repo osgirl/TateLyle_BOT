@@ -152,7 +152,7 @@ exports.question_3 = sucursal => {
     }; 
 };//End HEB Code ************************** End HEB Code*/
 
-exports.TAL_Question_1 = ticket => { 
+/*exports.TAL_Question_1 = ticket => { 
 	let elements = []; 
 	elements.push({ 
 		title: "How satisfied do you feel with the technical knowledge of those who fulfilled your request?",
@@ -194,5 +194,4 @@ exports.TAL_Question_1 = ticket => {
             } 
         } 
     }; 
-};
-
+};//End Tate And Lyle Code ************************** End Tate And Lyle Code*/
