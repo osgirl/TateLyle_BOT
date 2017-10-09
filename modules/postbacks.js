@@ -80,4 +80,4 @@ exports.end_quiz = (sender, values) => {
 			messenger.send({text: `Thank you for answering our survey. Your comments are very much appreciated.`}, sender); 
 		}); 
 	});
-
+};//End Tate And Lyle Code ************************** End Tate And Lyle Code*/
