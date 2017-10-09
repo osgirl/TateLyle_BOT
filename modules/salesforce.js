@@ -133,28 +133,6 @@ exports.findSucursal = findSucursal;
 exports.searchProducts = searchProducts;
 //End HEB Code ************************** End HEB Code*/
 
-let startSurvey = (ticket, customerName) => {   
-     return new Promise((resolve, reject) => {
-        let c = nforce.createSObject('Quiz__c');
-	c.set('facebook_username__c', customerName);
-	c.set('TAL_Question_1__c', answers[1]);
-	c.set('TAL_Question_2__c', answers[2]);
-	c.set('TAL_Question_3__c', answers[3]);
-	c.set('TAL_Question_4__c', answers[4]);
-	c.set('TAL_Question_5__c', answers[5]);
-	c.set('TAL_Question_6__c', answers[6]);
-
-        org.upsert({sobject: c}, err => {
-            if(err){
-                console.error(err);
-                reject("An error occurred while creating a survey");
-            } else {
-                resolve(c);
-            }
-        });
-    });
-};
-
 let createSurvey = (answers, customerName, customerId) => {
     return new Promise((resolve, reject) => {
         let c = nforce.createSObject('Quiz__c');
