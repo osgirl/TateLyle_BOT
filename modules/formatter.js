@@ -161,27 +161,27 @@ exports.TAL_Question_1 = ticket => {
 				{ 
 					"type": "postback", 
 					 "title": "1", 
-					 "payload": "quiz," + "1"
+					 "payload": "quiz_1," + "1"
 				},
 				{ 
 					"type": "postback", 
 					 "title": "2", 
-					 "payload": "quiz," + "2"
+					 "payload": "quiz_1," + "2"
 				},
 				{ 
 					"type": "postback", 
 					 "title": "3", 
-					 "payload": "quiz," + "3"
+					 "payload": "quiz_1," + "3"
 				},
 				{ 
 					"type": "postback", 
 					 "title": "4", 
-					 "payload": "quiz," + "4"
+					 "payload": "quiz_1," + "4"
 				},
 				{ 
 					"type": "postback", 
 					 "title": "5", 
-					 "payload": "quiz," + "5"
+					 "payload": "quiz_1," + "5"
 				}
 			]  
     }); 
