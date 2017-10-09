@@ -152,7 +152,7 @@ exports.question_3 = sucursal => {
     }; 
 };//End HEB Code ************************** End HEB Code*/
 
-exports.TAL_Question_1 = sucursal => { 
+exports.TAL_Question_1 = ticket => { 
 	let elements = []; 
 	elements.push({ 
 		title: "How satisfied do you feel with the technical knowledge of those who fulfilled your request?",
