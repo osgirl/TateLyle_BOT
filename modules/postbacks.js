@@ -58,12 +58,11 @@ exports.quiz = (sender, values) => {
 };////End HEB Code ************************** End HEB Code*/
 
 exports.start_quiz = (sender, values) => {
-	global_variable[0] = values[1];
-    	messenger.send({text: "Please share your experience."}, sender);
-    	messenger.send(formatter.TAL_Question_1(), sender);
+    global_variable[0] = values[1];
+    messenger.send({text: "Please share your experience."}, sender);
 };
 
 exports.quiz_1 = (sender, values) => {
-	global_variable[1] = values[1];
-    	messenger.send({text: "Survey End."}, sender);
+    global_variable[1] = values[1];
+    messenger.send({text: "Survey End."}, sender);
 };//End Tate And Lyle Code ************************** End Tate And Lyle Code*/
