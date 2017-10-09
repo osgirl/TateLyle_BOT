@@ -3,7 +3,7 @@
 let moment = require("moment"),
     numeral = require("numeral");
 
-exports.formatSucursal = sucursal => {    
+/*exports.formatSucursal = sucursal => {    
     let elements = [];	
     sucursal.forEach(sucursal => {            
 	    elements.push({                
@@ -151,4 +151,48 @@ exports.question_3 = sucursal => {
         } 
     }; 
 };//End HEB Code ************************** End HEB Code*/
+
+exports.TAL_Question_1 = sucursal => { 
+	let elements = []; 
+	elements.push({ 
+		title: "How satisfied do you feel with the technical knowledge of those who fulfilled your request?",
+		subtitle: "Question 1",
+		"buttons": [ 
+				{ 
+					"type": "postback", 
+					 "title": "1", 
+					 "payload": "quiz," + "1"
+				},
+				{ 
+					"type": "postback", 
+					 "title": "2", 
+					 "payload": "quiz," + "2"
+				},
+				{ 
+					"type": "postback", 
+					 "title": "3", 
+					 "payload": "quiz," + "3"
+				},
+				{ 
+					"type": "postback", 
+					 "title": "4", 
+					 "payload": "quiz," + "4"
+				},
+				{ 
+					"type": "postback", 
+					 "title": "5", 
+					 "payload": "quiz," + "5"
+				}
+			]  
+    }); 
+    return { 
+        "attachment": { 
+             "type": "template", 
+             "payload": { 
+                "template_type": "generic", 
+                "elements": elements 
+            } 
+        } 
+    }; 
+};
 
