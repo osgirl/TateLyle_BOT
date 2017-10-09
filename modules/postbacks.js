@@ -4,7 +4,7 @@ let salesforce = require('./salesforce'),
     messenger = require('./messenger'),
     formatter = require('./formatter');
 let global_variable = [];
-exports.schedule_visit = (sender, values) => {
+/*exports.schedule_visit = (sender, values) => {
     salesforce.findProperties({id: values[1]}).then(properties => {
         messenger.send(formatter.formatAppointment(properties[0]), sender);
     });
@@ -53,5 +53,19 @@ exports.quiz = (sender, values) => {
 			messenger.send({text: `Thank you for answering our survey. Your comments are very much appreciated.`}, sender); 
 		}); 
 	});
+};////End HEB Code ************************** End HEB Code*/
+
+exports.quiz = (sender, values) => {
+	global_variable[0] = values[1];
+    	messenger.send({text: "Please share your experience."}, sender);
+    	messenger.send(formatter.TAL_Question_1(), sender);
 };
+
+exports.end_quiz = (sender, values) => { 
+	global_variable[1] = values[1];
+	messenger.getUserInfo(sender).then(response => { 
+		salesforce.createQuiz(global_variable, response.first_name + " " + response.last_name, sender).then(() => { 			
+			messenger.send({text: `Thank you for answering our survey. Your comments are very much appreciated.`}, sender); 
+		}); 
+	});
 
