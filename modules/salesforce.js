@@ -1,15 +1,4 @@
 "use strict";
-login();
-
-exports.org = org;
-//exports.findProperties = findProperties;
-//exports.findPropertiesByCategory = findPropertiesByCategory;
-//exports.findPriceChanges = findPriceChanges;
-//exports.createCase = createCase;
-exports.createCase2 = createCase2;
-exports.createQuiz = createQuiz;
-exports.findSucursal = findSucursal;
-exports.searchProducts = searchProducts;
 
 let nforce = require('nforce'),
     SF_CLIENT_ID = process.env.SF_CLIENT_ID,
@@ -251,3 +240,15 @@ let createQuiz = (answers, customerName, customerId) => {
         });
     });
 };
+
+login();
+
+exports.org = org;
+//exports.findProperties = findProperties;
+//exports.findPropertiesByCategory = findPropertiesByCategory;
+//exports.findPriceChanges = findPriceChanges;
+//exports.createCase = createCase;
+exports.createCase2 = createCase2;
+exports.createQuiz = createQuiz;
+exports.findSucursal = findSucursal;
+exports.searchProducts = searchProducts;
