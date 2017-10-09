@@ -158,6 +158,5 @@ let createSurvey = (answers, customerName, ticket) => {
 login();
 
 exports.org = org;
-exports.startSurvey = startSurvey;
 exports.createSurvey = createSurvey;
 //End Tate And Lyle Code ************************** End Tate And Lyle Code*/
