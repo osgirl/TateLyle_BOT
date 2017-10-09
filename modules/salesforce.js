@@ -145,7 +145,7 @@ let createSurvey = (answers, customerName, customerId) => {
 	c.set('TAL_Question_6__c', answers[3]);
 
         org.insert({sobject: c}, err => {
-            if (err) {
+            if(err){
                 console.error(err);
                 reject("An error occurred while creating a survey");
             } else {
