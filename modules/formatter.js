@@ -160,13 +160,13 @@ exports.TAL_Question_1 = ticket => {
 	"buttons":[ 
 	    { 
                 "type": "postback", 
-		"title": "1", 
-		"payload": "quiz_1," + "1"
+		"title": "1"
+		//"payload": "quiz_1," + "1"
 	    },
 	    { 
 		"type": "postback", 
-		"title": "2", 
-		"payload": "quiz_1," + "2"
+		"title": "2" 
+		//"payload": "quiz_1," + "2"
 	    }
         ]  
     }); 
