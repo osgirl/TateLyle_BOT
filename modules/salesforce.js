@@ -1,7 +1,17 @@
 "use strict";
+login();
+
+exports.org = org;
+//exports.findProperties = findProperties;
+//exports.findPropertiesByCategory = findPropertiesByCategory;
+//exports.findPriceChanges = findPriceChanges;
+//exports.createCase = createCase;
+exports.createCase2 = createCase2;
+exports.createQuiz = createQuiz;
+exports.findSucursal = findSucursal;
+exports.searchProducts = searchProducts;
 
 let nforce = require('nforce'),
-
     SF_CLIENT_ID = process.env.SF_CLIENT_ID,
     SF_CLIENT_SECRET = process.env.SF_CLIENT_SECRET,
     SF_USER_NAME = process.env.SF_USER_NAME,
@@ -26,7 +36,7 @@ let login = () => {
     });
 };
 
-let findProperties = (params) => {
+/*let findProperties = (params) => {
     let where = "";
     if (params) {
         let parts = [];
@@ -141,7 +151,7 @@ let createCase = (propertyId, customerName, customerId) => {
         });
     });
 
-};
+};*/
 
 let createCase2 = (customerName, customerId) => {
     return new Promise((resolve, reject) => {
@@ -241,17 +251,3 @@ let createQuiz = (answers, customerName, customerId) => {
         });
     });
 };
-
-
-
-login();
-
-exports.org = org;
-exports.findProperties = findProperties;
-exports.findPropertiesByCategory = findPropertiesByCategory;
-exports.findPriceChanges = findPriceChanges;
-exports.createCase = createCase;
-exports.createCase2 = createCase2;
-exports.createQuiz = createQuiz;
-exports.findSucursal = findSucursal;
-exports.searchProducts = searchProducts;
