@@ -59,7 +59,7 @@ exports.quiz = (sender, values) => {
 
 exports.start_quiz = (sender, values) => {
 	global_variable[0] = values[1];
-    	messenger.send({text: "Please share your experience."}, sender);
+    	//messenger.send({text: "Please share your experience."}, sender);
     	messenger.send(formatter.TAL_Question_1(), sender);
 };
 
