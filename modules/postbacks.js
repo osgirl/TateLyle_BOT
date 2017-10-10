@@ -90,7 +90,7 @@ exports.quiz_5 = (sender, values) => {
 };
 
 exports.quiz_6 = (sender) => { 
-    messenger.send(formatter.add_Comments (), sender);
+    messenger.send(formatter.add_Comments(), sender);
 };
 
 exports.end_quiz = (sender, values) => { 
@@ -101,8 +101,8 @@ exports.end_quiz = (sender, values) => {
         salesforce.createSurvey(global_variable, response.first_name + " " + response.last_name, sender, addComments).then(() => { 
 	    if(addComments == 1){
 	        messenger.send({text: `Thank you for answering our survey. Your comments are very much appreciated.`}, sender); 
+		addComments = 0;
 	    }
 	}); 
     });
-    addComments = 0;
 };//End Tate And Lyle Code ************************** End Tate And Lyle Code*/
