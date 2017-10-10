@@ -55,9 +55,9 @@ exports.quiz = (sender, values) => {
 			messenger.send({text: `Thank you for answering our survey. Your comments are very much appreciated.`}, sender); 
 		}); 
 	});
-};////End HEB Code ************************** End HEB Code*/
+};//End HEB Code ************************** End HEB Code*/
 
-exports.start_quiz = (sender, values) => {
+/*exports.start_quiz = (sender, values) => {
     global_variable[0] = values[1];
     //messenger.send({text: "Please share your experience."}, sender);
 };
