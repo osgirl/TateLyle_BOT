@@ -345,7 +345,7 @@ exports.TAL_Question_5 = sucursal => {
     }; 
 };
 
-exports.end_Question = sucursal => { 
+exports.add_Comments = sucursal => { 
     let elements = []; 
     elements.push({ 
         title: "Add comments:",
