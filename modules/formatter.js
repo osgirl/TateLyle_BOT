@@ -297,17 +297,17 @@ exports.TAL_Question_5 = sucursal => {
             { 
                 "type": "postback", 
                 "title": "1", 
-                "payload": "quiz_5," + "1"
+                "payload": "end_quiz," + "1"
             },
 	    { 
                 "type": "postback", 
                 "title": "2", 
-                "payload": "quiz_5," + "2"
+                "payload": "end_quiz," + "2"
             },
 	    { 
                 "type": "postback", 
                 "title": "3", 
-                "payload": "quiz_5," + "3"
+                "payload": "end_quiz," + "3"
             }
         ]  
     }); 
