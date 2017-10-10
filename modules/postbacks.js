@@ -98,8 +98,10 @@ exports.end_quiz = (sender, values) => {
 	global_variable[6] = values[1];  
     } 
     messenger.getUserInfo(sender).then(response => { 
-        salesforce.createSurvey(global_variable, response.first_name + " " + response.last_name, sender).then(() => { 			
-	    messenger.send({text: `Thank you for answering our survey. Your comments are very much appreciated.`}, sender); 
+        salesforce.createSurvey(global_variable, response.first_name + " " + response.last_name, sender, addComments).then(() => { 
+	    if(addComments == 1){
+	        messenger.send({text: `Thank you for answering our survey. Your comments are very much appreciated.`}, sender); 
+	    }
 	}); 
     });
 };//End Tate And Lyle Code ************************** End Tate And Lyle Code*/
