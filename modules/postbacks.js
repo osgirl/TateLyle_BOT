@@ -64,5 +64,25 @@ exports.start_quiz = (sender, values) => {
 
 exports.quiz_1 = (sender, values) => { 
     global_variable[1] = values[1];
-	//messenger.send(formatter.question_2(), sender);
+    messenger.send(formatter.TAL_Question_2(), sender);
+};
+
+exports.quiz_2 = (sender, values) => { 
+    global_variable[2] = values[1];
+    messenger.send(formatter.TAL_Question_3(), sender);
+};
+
+exports.quiz_3 = (sender, values) => { 
+    global_variable[3] = values[1];
+    messenger.send(formatter.TAL_Question_4(), sender);
+};
+
+exports.quiz_4 = (sender, values) => { 
+    global_variable[4] = values[1];
+    messenger.send(formatter.TAL_Question_5(), sender);
+};
+
+exports.quiz_5 = (sender, values) => { 
+    global_variable[5] = values[1];
+    //messenger.send(formatter.TAL_Question_2(), sender);
 };//End Tate And Lyle Code ************************** End Tate And Lyle Code*/
