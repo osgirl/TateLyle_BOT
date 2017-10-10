@@ -63,6 +63,6 @@ exports.start_quiz = (sender, values) => {
 };
 
 exports.quiz_1 = (sender, values) => { 
-	global_variable[1] = values[1];
+    global_variable[1] = values[1];
 	//messenger.send(formatter.question_2(), sender);
 };//End Tate And Lyle Code ************************** End Tate And Lyle Code*/
