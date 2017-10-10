@@ -153,9 +153,9 @@ exports.searchProducts = searchProducts;
             }
         });
     });
-};
+};*/
 
-login();*/
+login();
 
 exports.org = org;
 //exports.createSurvey = createSurvey;
