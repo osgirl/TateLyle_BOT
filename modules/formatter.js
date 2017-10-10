@@ -165,7 +165,6 @@ exports.start_Question = sucursal => {
 	    { 
                 "type": "postback", 
                 "title": "No", 
-                "payload": "start_quiz," + "no"
             }
         ]  
     }); 
