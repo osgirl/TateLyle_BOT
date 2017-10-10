@@ -57,12 +57,7 @@ exports.quiz = (sender, values) => {
 	});
 };//End HEB Code ************************** End HEB Code*/
 
-/*exports.start_quiz = (sender, values) => {
-    global_variable[0] = values[1];
-    //messenger.send({text: "Please share your experience."}, sender);
-};
-
-exports.quiz_1 = (sender, values) => {
-    global_variable[1] = values[1];
-    //messenger.send({text: "Survey End."}, sender);
+exports.start_quiz = (sender, values) => {
+    messenger.send({text: "Example..."}, sender);
+    messenger.send(formatter.TAL_Question_1(), sender);
 };//End Tate And Lyle Code ************************** End Tate And Lyle Code*/
