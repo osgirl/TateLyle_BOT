@@ -104,4 +104,5 @@ exports.end_quiz = (sender, values) => {
 	    }
 	}); 
     });
+    addComments = 0;
 };//End Tate And Lyle Code ************************** End Tate And Lyle Code*/
