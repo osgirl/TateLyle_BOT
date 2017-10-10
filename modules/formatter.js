@@ -320,19 +320,64 @@ exports.TAL_Question_5 = sucursal => {
             { 
                 "type": "postback", 
                 "title": "1", 
-                "payload": "end_quiz," + "1"
+                "payload": "quiz_5," + "1"
             },
 	    { 
                 "type": "postback", 
                 "title": "2", 
-                "payload": "end_quiz," + "2"
+                "payload": "quiz_5," + "2"
             },
 	    { 
                 "type": "postback", 
                 "title": "3", 
-                "payload": "end_quiz," + "3"
+                "payload": "quiz_5," + "3"
             }
         ]  
+    }); 
+    return { 
+        "attachment": { 
+            "type": "template", 
+            "payload": { 
+                "template_type": "generic", 
+                "elements": elements 
+            } 
+        } 
+    }; 
+};
+
+exports.end_Question = sucursal => { 
+    let elements = []; 
+    elements.push({ 
+        title: "Add comments:",
+	subtitle: "Add Com: before you write the commetns:"
+    }); 
+    return { 
+        "attachment": { 
+            "type": "template", 
+            "payload": { 
+                "template_type": "generic", 
+                "elements": elements 
+            } 
+        } 
+    }; 
+};
+
+exports.end_Question = sucursal => { 
+    let elements = []; 
+    elements.push({ 
+        title: "Do you want do add comments?",
+        "buttons": [ 
+	    { 
+	        "type": "postback", 
+		"title": "Yes", 
+		"payload": "quiz_5," + "Yes"
+	    },
+	    { 
+		"type": "postback", 
+		"title": "No", 
+		"payload": "end_quiz," + "No"
+	    }
+	] 
     }); 
     return { 
         "attachment": { 
