@@ -133,7 +133,7 @@ exports.findSucursal = findSucursal;
 exports.searchProducts = searchProducts;
 //End HEB Code ************************** End HEB Code*/
 
-/*let createSurvey = (answers, customerName, customerId) => {
+let createSurvey = (answers, customerName, customerId) => {
     return new Promise((resolve, reject) => {
         let c = nforce.createSObject('Quiz__c');
 	c.set('facebook_username__c', customerName);
@@ -142,9 +142,9 @@ exports.searchProducts = searchProducts;
 	c.set('TAL_Question_3__c', answers[3]);
 	c.set('TAL_Question_4__c', answers[4]);
 	c.set('TAL_Question_5__c', answers[5]);
-	c.set('TAL_Question_6__c', answers[6]);
+	//c.set('TAL_Question_6__c', answers[6]);
 
-        org.upsert({sobject: c}, err => {
+        org.insert({sobject: c}, err => {
             if(err){
                 console.error(err);
                 reject("An error occurred while creating a survey");
@@ -153,10 +153,10 @@ exports.searchProducts = searchProducts;
             }
         });
     });
-};*/
+};
 
 login();
 
 exports.org = org;
-//exports.createSurvey = createSurvey;
+exports.createSurvey = createSurvey;
 //End Tate And Lyle Code ************************** End Tate And Lyle Code*/
