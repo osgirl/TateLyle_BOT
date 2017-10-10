@@ -152,50 +152,21 @@ exports.question_3 = sucursal => {
     }; 
 };//End HEB Code ************************** End HEB Code*/
 
-/*exports.TAL_Question_1 = ticket => { 
-    let elements = []; 
-    elements.push({ 
-        title: "How satisfied do you feel with the technical knowledge of those who fulfilled your request?",
-	subtitle: "Question 1",
-	"buttons":[ 
-	    { 
-                "type": "postback", 
-		"title": "1"
-		"payload": "quiz_1," + "1"
-	    },
-	    { 
-		"type": "postback", 
-		"title": "2" 
-		"payload": "quiz_1," + "2"
-	    }
-        ]  
-    }); 
-    return { 
-        "attachment": { 
-            "type": "template", 
-            "payload": { 
-                "template_type": "generic", 
-                "elements": elements 
-            } 
-        } 
-    }; 
-};*/
-
 exports.TAL_Question_1 = sucursal => { 
     let elements = []; 
     elements.push({ 
-        title: "Will you continue visiting us for future purchases?",
-        subtitle: "3rd Question",
+        title: "How satisfied do you feel with the technical knowledge of those who fulfilled your request?",
+        subtitle: "Question 1",
         "buttons": [ 
             { 
                 "type": "postback", 
-                "title": "Yes", 
-                "payload": "quiz_1," + "Yes"
+                "title": "1", 
+                "payload": "quiz_1," + "1"
             },
 	    { 
                 "type": "postback", 
-                "title": "No", 
-                "payload": "quiz_1," + "No"
+                "title": "2", 
+                "payload": "quiz_1," + "2"
             }
         ]  
     }); 
