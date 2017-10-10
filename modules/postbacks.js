@@ -58,8 +58,10 @@ exports.quiz = (sender, values) => {
 };//End HEB Code ************************** End HEB Code*/
 
 exports.start_quiz = (sender, values) => {
-    messenger.send({text: "Example..."}, sender);
-    messenger.send(formatter.TAL_Question_1(), sender);
+    if(values[1] = 'yes'){
+    	messenger.send({text: "Answer the next questions..."}, sender);
+    	messenger.send(formatter.TAL_Question_1(), sender);
+    } 
 };
 
 exports.quiz_1 = (sender, values) => { 
