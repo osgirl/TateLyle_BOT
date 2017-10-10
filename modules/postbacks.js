@@ -84,7 +84,7 @@ exports.quiz_4 = (sender, values) => {
 
 exports.quiz_5 = (sender, values) => { 
     global_variable[5] = values[1];
-    //messenger.send(formatter.TAL_Question_2(), sender);
+    messenger.send(formatter.add_Comments(), sender);
 };
 
 exports.end_quiz = (sender, values) => { 
