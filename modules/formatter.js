@@ -152,6 +152,34 @@ exports.question_3 = sucursal => {
     }; 
 };//End HEB Code ************************** End HEB Code*/
 
+exports.start_Question = sucursal => { 
+    let elements = []; 
+    elements.push({ 
+        title: "Do you want answer some questions about our service?",
+        "buttons": [ 
+            { 
+                "type": "postback", 
+                "title": "Yes", 
+                "payload": "start_quiz," + "yes"
+            },
+	    { 
+                "type": "postback", 
+                "title": "No", 
+                "payload": "start_quiz," + "no"
+            }
+        ]  
+    }); 
+    return { 
+        "attachment": { 
+            "type": "template", 
+            "payload": { 
+                "template_type": "generic", 
+                "elements": elements 
+            } 
+        } 
+    }; 
+};
+
 exports.TAL_Question_1 = sucursal => { 
     let elements = []; 
     elements.push({ 
