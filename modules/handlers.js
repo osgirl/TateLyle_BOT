@@ -45,7 +45,6 @@ exports.answerSurvey = (sender, values) => {       
 };
 
 exports.addCommentsText = (sender, values) => { 
-    messenger.send({text: `Adding comments...`}, sender);
     messenger.getUserInfo(sender).then(response => {
         postbacks.end_quiz(sender, values[1]);
     });
