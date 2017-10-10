@@ -156,7 +156,7 @@ exports.TAL_Question_1 = sucursal => {
     let elements = []; 
     elements.push({ 
         title: "How satisfied do you feel with the technical knowledge of those who fulfilled your request?",
-        subtitle: "Question 1",
+        subtitle: "(1 = Lowest, 5 = Highest)",
         "buttons": [ 
             { 
                 "type": "postback", 
@@ -167,6 +167,21 @@ exports.TAL_Question_1 = sucursal => {
                 "type": "postback", 
                 "title": "2", 
                 "payload": "quiz_1," + "2"
+            },
+	    { 
+                "type": "postback", 
+                "title": "3", 
+                "payload": "quiz_1," + "3"
+            },
+	    { 
+                "type": "postback", 
+                "title": "4", 
+                "payload": "quiz_1," + "4"
+            },
+	    { 
+                "type": "postback", 
+                "title": "5", 
+                "payload": "quiz_1," + "5"
             }
         ]  
     }); 
