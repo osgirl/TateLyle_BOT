@@ -45,8 +45,9 @@ exports.answerSurvey = (sender, values) => {       
 };
 
 exports.addCommentsText = (sender, values) => { 
+    messenger.send({text: `Adding comments...`}, sender);
     messenger.getUserInfo(sender).then(response => {
-        postbacks.end_quiz(values[1], sender);
+        postbacks.end_quiz(sender, values[1]);
     });
 };//End Tate And Lyle Code ************************** End Tate And Lyle Code*/
 
