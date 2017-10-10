@@ -159,7 +159,7 @@ exports.start_Question = sucursal => {
         "buttons": [ 
             { 
                 "type": "postback", 
-                "title": "Yes", 
+                "title": "Start Survey", 
                 "payload": "start_quiz," + "Start Survey"
             }
         ]  
