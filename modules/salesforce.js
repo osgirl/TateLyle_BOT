@@ -133,7 +133,7 @@ exports.findSucursal = findSucursal;
 exports.searchProducts = searchProducts;
 //End HEB Code ************************** End HEB Code*/
 
-let createSurvey = (answers, customerName, customerId) => {
+/*let createSurvey = (answers, customerName, customerId) => {
     return new Promise((resolve, reject) => {
         let c = nforce.createSObject('Quiz__c');
 	c.set('facebook_username__c', customerName);
@@ -155,8 +155,8 @@ let createSurvey = (answers, customerName, customerId) => {
     });
 };
 
-login();
+login();*/
 
 exports.org = org;
-exports.createSurvey = createSurvey;
+//exports.createSurvey = createSurvey;
 //End Tate And Lyle Code ************************** End Tate And Lyle Code*/
