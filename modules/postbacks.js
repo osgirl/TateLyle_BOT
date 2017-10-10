@@ -85,24 +85,26 @@ exports.quiz_4 = (sender, values) => {
 
 exports.quiz_5 = (sender, values) => { 
     global_variable[5] = values[1];
+    addComments = 1;
     messenger.send(formatter.end_Question(), sender);
 };
 
 exports.quiz_6 = (sender) => { 
-    addComments = 1;
     messenger.send(formatter.add_Comments (), sender);
 };
 
 exports.end_quiz = (sender, values) => { 
     if(addComments == 1){
 	global_variable[6] = values;
-	messenger.send({text: `Adding comments...`}, sender);
-    } else {
-	global_variable[6] = "No Comments added";
-    }
-    messenger.getUserInfo(sender).then(response => { 
-        salesforce.createSurvey(global_variable, response.first_name + " " + response.last_name, sender).then(() => { 			
-	    messenger.send({text: `Thank you for answering our survey. Your comments are very much appreciated.`}, sender); 
-	}); 
-    });
+	if(values != "No Comments added"){
+	    messenger.send({text: `Adding comments...`}, sender);
+        }
+	messenger.getUserInfo(sender).then(response => { 
+            salesforce.createSurvey(global_variable, response.first_name + " " + response.last_name, sender).then(() => { 			
+	        messenger.send({text: `Thank you for answering our survey. Your comments are very much appreciated.`}, sender); 
+	    }); 
+        });
+	addComments = 0:    
+    } 
+    
 };//End Tate And Lyle Code ************************** End Tate And Lyle Code*/
