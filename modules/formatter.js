@@ -370,12 +370,12 @@ exports.end_Question = sucursal => {
 	    { 
 	        "type": "postback", 
 		"title": "Yes", 
-		"payload": "add_Comments," + "Yes"
+		"payload": "quiz_6"
 	    },
 	    { 
 		"type": "postback", 
 		"title": "No", 
-		"payload": "end_quiz," + "No"
+		"payload": "end_quiz," + "No Comments added"
 	    }
 	] 
     }); 
