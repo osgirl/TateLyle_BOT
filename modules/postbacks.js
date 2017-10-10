@@ -5,6 +5,7 @@ let salesforce = require('./salesforce'),
     formatter = require('./formatter');
 
 let global_variable = [];
+let addComments = 0;
 
 /*exports.schedule_visit = (sender, values) => {
     salesforce.findProperties({id: values[1]}).then(properties => {
