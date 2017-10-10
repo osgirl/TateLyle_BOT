@@ -2,7 +2,8 @@
 
 let salesforce = require('./salesforce'),
     messenger = require('./messenger'),
-    formatter = require('./formatter');
+    formatter = require('./formatter'),
+    postbacks = require('./postbacks');
 
 /*exports.hi = (sender) => {
     messenger.getUserInfo(sender).then(response => {
@@ -41,5 +42,11 @@ exports.help = (sender) => {
 exports.answerSurvey = (sender, values) => {        
     messenger.send({text: `Survey for Ticket ${values[1]}`}, sender);  
     messenger.send(formatter.start_Question(), sender); 
+};
+
+exports.addCommentsText = (sender, values) => { 
+    messenger.getUserInfo(sender).then(response => {
+        postbacks.end_quiz(values[1], sender);
+    });
 };//End Tate And Lyle Code ************************** End Tate And Lyle Code*/
 
