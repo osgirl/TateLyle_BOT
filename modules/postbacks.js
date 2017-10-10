@@ -94,9 +94,11 @@ exports.quiz_6 = (sender) => {
 };
 
 exports.end_quiz = (sender, values) => { 
-    global_variable[6] = values[1];
     if(addComments == 1){
+	global_variable[6] = values;
 	messenger.send({text: `Adding comments...`}, sender);
+    } else {
+	global_variable[6] = "No Comments added";
     }
     messenger.getUserInfo(sender).then(response => { 
         salesforce.createSurvey(global_variable, response.first_name + " " + response.last_name, sender).then(() => { 			
