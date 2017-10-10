@@ -4,4 +4,5 @@ queja crear queja
 searchSucursal_City in (.*)
 searchProducts_Offers with (.*)
 
+addCommentsText AddCom: (.*)
 answerSurvey Ticket (.*)
