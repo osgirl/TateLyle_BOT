@@ -89,6 +89,7 @@ exports.quiz_5 = (sender, values) => {
 };
 
 exports.quiz_6 = (sender) => { 
+    addComments = 1;
     messenger.send(formatter.add_Comments (), sender);
 };
 
