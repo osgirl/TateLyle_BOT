@@ -38,7 +38,7 @@ exports.help = (sender) => {
     messenger.send({text: `You can ask me questions like "Survey Ticket 1234", "Ticket 1234"`}, sender);
 };
 
-/*exports.answerSurvey = (sender, values) => {        
+exports.answerSurvey = (sender, values) => {        
     messenger.send({text: `Survey for Ticket ${values[1]}`}, sender);  
     //messenger.send(formatter.TAL_Question_1(), sender); 
 };//End Tate And Lyle Code ************************** End Tate And Lyle Code*/
