@@ -370,7 +370,7 @@ exports.end_Question = sucursal => {
 	    { 
 	        "type": "postback", 
 		"title": "Yes", 
-		"payload": "quiz_5," + "Yes"
+		"payload": "add_Comments," + "Yes"
 	    },
 	    { 
 		"type": "postback", 
