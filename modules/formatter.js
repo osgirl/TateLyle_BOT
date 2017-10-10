@@ -152,7 +152,7 @@ exports.question_3 = sucursal => {
     }; 
 };//End HEB Code ************************** End HEB Code*/
 
-exports.TAL_Question_1 = ticket => { 
+/*exports.TAL_Question_1 = ticket => { 
     let elements = []; 
     elements.push({ 
         title: "How satisfied do you feel with the technical knowledge of those who fulfilled your request?",
@@ -174,6 +174,35 @@ exports.TAL_Question_1 = ticket => {
         "attachment": { 
             "type": "template", 
             "payload": { 
+                "template_type": "generic", 
+                "elements": elements 
+            } 
+        } 
+    }; 
+};*/
+
+exports.TAL_Question_1 = sucursal => { 
+	let elements = []; 
+	elements.push({ 
+		title: "Will you continue visiting us for future purchases?",
+		subtitle: "3rd Question",
+		"buttons": [ 
+				{ 
+					"type": "postback", 
+					 "title": "Yes", 
+					 "payload": "quiz_1," + "Yes"
+				},
+				{ 
+					"type": "postback", 
+					 "title": "No", 
+					 "payload": "quiz_1," + "No"
+				}
+			]  
+    }); 
+    return { 
+        "attachment": { 
+             "type": "template", 
+             "payload": { 
                 "template_type": "generic", 
                 "elements": elements 
             } 
