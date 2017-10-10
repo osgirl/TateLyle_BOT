@@ -182,27 +182,27 @@ exports.question_3 = sucursal => {
 };*/
 
 exports.TAL_Question_1 = sucursal => { 
-	let elements = []; 
-	elements.push({ 
-		title: "Will you continue visiting us for future purchases?",
-		subtitle: "3rd Question",
-		"buttons": [ 
-				{ 
-					"type": "postback", 
-					 "title": "Yes", 
-					 "payload": "quiz_1," + "Yes"
-				},
-				{ 
-					"type": "postback", 
-					 "title": "No", 
-					 "payload": "quiz_1," + "No"
-				}
-			]  
+    let elements = []; 
+    elements.push({ 
+        title: "Will you continue visiting us for future purchases?",
+        subtitle: "3rd Question",
+        "buttons": [ 
+            { 
+                "type": "postback", 
+                "title": "Yes", 
+                "payload": "quiz_1," + "Yes"
+            },
+	    { 
+                "type": "postback", 
+                "title": "No", 
+                "payload": "quiz_1," + "No"
+            }
+        ]  
     }); 
     return { 
         "attachment": { 
-             "type": "template", 
-             "payload": { 
+            "type": "template", 
+            "payload": { 
                 "template_type": "generic", 
                 "elements": elements 
             } 
