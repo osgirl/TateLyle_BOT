@@ -142,7 +142,7 @@ let createSurvey = (answers, customerName, customerId) => {
 	c.set('TAL_Question_3__c', answers[3]);
 	c.set('TAL_Question_4__c', answers[4]);
 	c.set('TAL_Question_5__c', answers[5]);
-	if(answers.size() >= 6){
+	if(answers[6] != ''){
 	     c.set('TAL_Question_6__c', answers[6]);
 	}
         org.insert({sobject: c}, err => {
