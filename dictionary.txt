@@ -1,4 +1,4 @@
 hi hi
 help help
-addCommentsText AddCom: (.*)
+addCommentsText Com: (.*)
 answerSurvey Ticket (.*)
