@@ -14,7 +14,28 @@ exports.start_quiz = (sender, values) => {
     messenger.send(formatter.TAL_Question_1(), sender);
 };
 
-exports.quiz_1 = (sender, values) => { 
+exports.nextQuestion = (sender, values) => { 
+    if(questionNum == 1){
+        global_variable[1] = values[1];
+        questionNum = 2;
+        messenger.send(formatter.TAL_Question_2(), sender);
+    } else if(questionNum == 2){
+        global_variable[2] = values[1];
+        questionNum = 3;
+        messenger.send(formatter.TAL_Question_3(), sender);
+    } else if(questionNum == 3){
+        global_variable[3] = values[1];
+        questionNum = 4;
+        messenger.send(formatter.TAL_Question_4(), sender);
+    } else if(questionNum == 4){
+        global_variable[4] = values[1];
+        questionNum = 5;
+        messenger.send(formatter.TAL_Question_5(), sender);
+    } else if(){
+    }
+}
+
+/*exports.quiz_1 = (sender, values) => { 
     global_variable[1] = values[1];
     questionNum = 2;
     messenger.send(formatter.TAL_Question_2(), sender);
@@ -36,7 +57,7 @@ exports.quiz_4 = (sender, values) => {
     global_variable[4] = values[1];
     questionNum = 5;
     messenger.send(formatter.TAL_Question_5(), sender);
-};
+};*/
 
 exports.quiz_5 = (sender, values) => { 
     global_variable[5] = values[1];
