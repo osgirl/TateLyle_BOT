@@ -5,11 +5,19 @@ let salesforce = require('./salesforce'),
     formatter = require('./formatter');
 
 let global_variable = [];
+let actOption = 0;
 let questionNum = 0;
 let addComments = 0;
 
+exports.actOptions = (sender, values) => {
+    if(actOption = 1){
+        nextQuestion(sender, values);
+    }
+};
+
 exports.start_quiz = (sender, values) => {
     messenger.send({text: "Answer the next questions..."}, sender);
+    actOption = 1;
     questionNum = 1;
     messenger.send(formatter.TAL_Question_1(), sender);
 };
