@@ -12,14 +12,22 @@ exports.hi = (sender) => {
 };
 
 exports.help = (sender) => {
-    messenger.send({text: `You can ask me questions like "CSAT1234"`}, sender);
+    messenger.send({text: `You can ask me questions like "INC1234", "Location in Europe" and "Locations"`}, sender);
 };
 
 exports.answerSurvey = (sender, values) => {        
-    messenger.send({text: `Survey for Ticket ${values[1]}`}, sender);  
+    messenger.send({text: `INC${values[1]}`}, sender);  
     messenger.send(formatter.start_Question(), sender); 
 };
 
 exports.saveValues = (sender, values) => { 
     postbacks.actOptions(sender, values);
+};
+
+exports.serchLocation = (sender) => {
+    messenger.send({text: `Locations:"`}, sender);
+};
+
+exports.serchEspLocation = (sender, values) => {
+    messenger.send({text: `Locations in ${values[1]}"`}, sender);
 };
