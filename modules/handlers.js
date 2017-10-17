@@ -25,9 +25,9 @@ exports.saveValues = (sender, values) => { 
 };
 
 exports.serchLocation = (sender) => {
-    messenger.send({text: `Locations:"`}, sender);
+    messenger.send({text: `Locations:`}, sender);
 };
 
 exports.serchEspLocation = (sender, values) => {
-    messenger.send({text: `Locations in ${values[1]}"`}, sender);
+    messenger.send({text: `Locations in ${values[1]}`}, sender);
 };
