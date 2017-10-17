@@ -115,7 +115,7 @@ exports.add_Comments = sucursal => {
     let elements = []; 
     elements.push({ 
         title: "Add comments:",
-	subtitle: "Add Com: before you write the commetns:"
+	subtitle: "Add your comments and press Enter to save your opinion."
     }); 
     return { 
         "attachment": { 
