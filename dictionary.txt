@@ -3,3 +3,4 @@ help help
 answerSurvey Ticket (.*)
 saveValues (.*)
 serchLocation in (.*)
+serchLocation Locations
