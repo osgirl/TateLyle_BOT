@@ -2,8 +2,4 @@ hi hi
 help help
 addCommentsText Com: (.*)
 answerSurvey Ticket (.*)
-saveValues One
-saveValues 2
-saveValues 3
-saveValues 4
-saveValues 5
+saveValues (.*)
