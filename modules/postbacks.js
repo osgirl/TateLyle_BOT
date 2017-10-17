@@ -5,6 +5,7 @@ let salesforce = require('./salesforce'),
     formatter = require('./formatter');
 
 let global_variable = [];
+let questionNum = 0;
 let addComments = 0;
 
 exports.start_quiz = (sender, values) => {
