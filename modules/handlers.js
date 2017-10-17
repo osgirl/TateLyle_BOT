@@ -26,6 +26,6 @@ exports.addCommentsText = (sender, values) => { 
     });
 };
 
-exports.getValues = (sender, values) => { 
+exports.saveValues = (sender, values) => { 
     messenger.send({text: `Value ${values[1]}`}, sender);  
 };
