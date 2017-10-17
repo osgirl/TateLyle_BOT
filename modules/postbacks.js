@@ -58,4 +58,4 @@ exports.endQuiz = (sender, values) => {
 	     questionNum = 0;
 	}); 
     });
-};*/
+};
