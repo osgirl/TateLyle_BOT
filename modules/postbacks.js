@@ -11,7 +11,7 @@ let addComments = 0;
 
 exports.actOptions = (sender, values) => {
     if(actOption == 1){
-        nextQuestion(sender, values);
+       this.nextQuestion(sender, values);
     }
 };
 
