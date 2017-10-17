@@ -61,15 +61,15 @@ let findLocations = (params) => {
     return new Promise((resolve, reject) => {        
         let q = `SELECT id,                    
                 Name,
+                BillingCity,
+                BillingStreet,
+		Phone,
+                HEB_Front_Picture__c,
+                HEB_Location__c,
                 HEB_City__c
-                FROM Account                                 
-		LIMIT 5`;//${where}   
-	        //BillingCity,
-		//BillingStreet,
-		//Phone,
-                //HEB_Front_Picture__c,
-                //HEB_Location__c,
-		//HEB_City__c
+                FROM Account  
+		WHERE Industry = 'Food & Beverage'
+		LIMIT 5`;//${where}   	       
         org.query({query: q}, (err, resp) => {            
             if (err) {               
                 reject("An error as occurred");            
