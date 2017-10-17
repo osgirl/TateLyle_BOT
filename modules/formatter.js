@@ -45,7 +45,7 @@ exports.TAL_Question_1 = sucursal => {
 	    { 
                 "type": "postback", 
                 "title": "5", 
-                "payload": "quiz_1," + "3"
+                "payload": "quiz_1," + "5"
             }
         ]   
     }); 
