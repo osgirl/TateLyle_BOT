@@ -55,6 +55,7 @@ exports.endQuiz = (sender, values) => {
 	     messenger.send({text: `Thank you for answering our survey. Your comments are very much appreciated.`}, sender); 
 	     //addComments = 0;
 	     actOption = 0;
+	     questionNum = 0;
 	}); 
     });
 };*/
