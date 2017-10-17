@@ -49,7 +49,6 @@ exports.TAL_Question_1 = sucursal => {
             }
         ]   
     },{ 
-        title: "Other?",
         "buttons": [ 
             { 
                 "type": "postback", 
