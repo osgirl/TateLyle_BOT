@@ -64,8 +64,8 @@ exports.TAL_Question_2 = sucursal => {
     let elements = []; 
     elements.push({ 
         title: "Overall satisfaction with support provided in relation to your request?",
-        subtitle: "1=Lowest, 3=Highest",
-        "buttons": [ 
+        subtitle: "1=Lowest, 3=Highest"
+        /*"buttons": [ 
             { 
                 "type": "postback", 
                 "title": "1", 
@@ -81,7 +81,7 @@ exports.TAL_Question_2 = sucursal => {
                 "title": "3", 
                 "payload": "quiz_2," + "3"
             }
-        ]  
+        ]*/ 
     }); 
     return { 
         "attachment": { 
@@ -98,8 +98,8 @@ exports.TAL_Question_3 = sucursal => {
     let elements = []; 
     elements.push({ 
         title: "How satisfied do you feel with how quickly your request was resolved?",
-        subtitle: "1=Lowest, 3=Highest",
-        "buttons": [ 
+        subtitle: "1=Lowest, 3=Highest"
+        /*"buttons": [ 
             { 
                 "type": "postback", 
                 "title": "1", 
@@ -115,7 +115,7 @@ exports.TAL_Question_3 = sucursal => {
                 "title": "3", 
                 "payload": "quiz_3," + "3"
             }
-        ]  
+        ]*/
     }); 
     return { 
         "attachment": { 
@@ -132,8 +132,8 @@ exports.TAL_Question_4 = sucursal => {
     let elements = []; 
     elements.push({ 
         title: "Do you feel your ticket was given the urgency and priority that was correct?",
-        subtitle: "1=Lowest, 3=Highest",
-        "buttons": [ 
+        subtitle: "1=Lowest, 3=Highest"
+        /*"buttons": [ 
             { 
                 "type": "postback", 
                 "title": "1", 
@@ -149,7 +149,7 @@ exports.TAL_Question_4 = sucursal => {
                 "title": "3", 
                 "payload": "quiz_4," + "3"
             }
-        ]  
+        ]*/  
     }); 
     return { 
         "attachment": { 
@@ -166,8 +166,8 @@ exports.TAL_Question_5 = sucursal => {
     let elements = []; 
     elements.push({ 
         title: "Please rate overall courtesy of the staff.",
-        subtitle: "1=Lowest, 3=Highest",
-        "buttons": [ 
+        subtitle: "1=Lowest, 3=Highest"
+        /*"buttons": [ 
             { 
                 "type": "postback", 
                 "title": "1", 
@@ -183,7 +183,7 @@ exports.TAL_Question_5 = sucursal => {
                 "title": "3", 
                 "payload": "quiz_5," + "3"
             }
-        ]  
+        ]*/ 
     }); 
     return { 
         "attachment": { 
