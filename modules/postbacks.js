@@ -31,8 +31,7 @@ exports.nextQuestion = (sender, values) => {
         global_variable[4] = values[1];
         questionNum = 5;
         messenger.send(formatter.TAL_Question_5(), sender);
-    } else if(){
-    }
+    } 
 }
 
 /*exports.quiz_1 = (sender, values) => { 
