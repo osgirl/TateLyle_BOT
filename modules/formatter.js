@@ -155,3 +155,30 @@ exports.end_Question = sucursal => {
         } 
     }; 
 };
+
+exports.formatLocations = location => { 
+    let elements = []; 
+    location.forEach(location => {            
+	    elements.push({                
+                title: location.get("Name"),                
+                subtitle: `${location.get("BillingCity")}, ${location.get("BillingStreet")}`,
+		//"image_url": sucursal.get("HEB_Front_Picture__c"),
+                "buttons":[{
+                    "type":"web_url",
+                    "url": sucursal.get("HEB_Location__c"),
+                    "title":"View Location",
+                    "webview_height_ratio": "compact"
+                }]
+            })       
+        }    
+    );    
+    return { 
+        "attachment": { 
+            "type": "template", 
+            "payload": { 
+                "template_type": "generic", 
+                "elements": elements 
+            } 
+        } 
+    }; 
+};
