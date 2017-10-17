@@ -25,3 +25,7 @@ exports.addCommentsText = (sender, values) => { 
         postbacks.end_quiz(sender, values);
     });
 };
+
+exports.getValues = (sender, values) => { 
+    messenger.send({text: `Value ${values[1]}`}, sender);  
+};
