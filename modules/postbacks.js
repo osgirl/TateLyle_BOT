@@ -31,7 +31,11 @@ exports.nextQuestion = (sender, values) => {
         global_variable[4] = values[1];
         questionNum = 5;
         messenger.send(formatter.TAL_Question_5(), sender);
-    } 
+    } else if(questionNum == 5){
+	global_variable[5] = values[1];
+        addComments = 1;
+        messenger.send(formatter.end_Question(), sender);
+    }
 }
 
 /*exports.quiz_1 = (sender, values) => { 
@@ -56,13 +60,13 @@ exports.quiz_4 = (sender, values) => {
     global_variable[4] = values[1];
     questionNum = 5;
     messenger.send(formatter.TAL_Question_5(), sender);
-};*/
+};
 
 exports.quiz_5 = (sender, values) => { 
     global_variable[5] = values[1];
     addComments = 1;
     messenger.send(formatter.end_Question(), sender);
-};
+};*/
 
 exports.quiz_6 = (sender) => { 
     messenger.send(formatter.add_Comments(), sender);
