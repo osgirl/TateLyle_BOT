@@ -10,26 +10,31 @@ let addComments = 0;
 
 exports.start_quiz = (sender, values) => {
     messenger.send({text: "Answer the next questions..."}, sender);
+    questionNum = 1;
     messenger.send(formatter.TAL_Question_1(), sender);
 };
 
 exports.quiz_1 = (sender, values) => { 
     global_variable[1] = values[1];
+    questionNum = 2;
     messenger.send(formatter.TAL_Question_2(), sender);
 };
 
 exports.quiz_2 = (sender, values) => { 
     global_variable[2] = values[1];
+    questionNum = 3;
     messenger.send(formatter.TAL_Question_3(), sender);
 };
 
 exports.quiz_3 = (sender, values) => { 
     global_variable[3] = values[1];
+    questionNum = 4;
     messenger.send(formatter.TAL_Question_4(), sender);
 };
 
 exports.quiz_4 = (sender, values) => { 
     global_variable[4] = values[1];
+    questionNum = 5;
     messenger.send(formatter.TAL_Question_5(), sender);
 };
 
