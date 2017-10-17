@@ -2,8 +2,8 @@ hi hi
 help help
 addCommentsText Com: (.*)
 answerSurvey Ticket (.*)
-getValueOne 1 
-getValueTwo 2 
-getValueThree 3 
-getValueFour 4 
-getValueFive 5 
+getValues 1 
+getValues 2 
+getValues 3 
+getValues 4 
+getValues 5 
