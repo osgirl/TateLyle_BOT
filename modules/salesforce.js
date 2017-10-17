@@ -49,8 +49,8 @@ let createSurvey = (answers, customerName, customerId) => {
 };
 
 let findLocations = (params) => {   
-    let where = "";
-    /*if(params){
+    /*let where = "";
+    if(params){
         let parts = [];
         if(params.id) parts.push(`id='${params.id}'`);
         if(params.city) parts.push(`Billingcity='${params.city}'`);
@@ -67,9 +67,8 @@ let findLocations = (params) => {
                 //HEB_Front_Picture__c,
                 HEB_Location__c,
 		HEB_City__c
-                FROM Account                
-                ${where}
-		LIMIT 5`;        
+                FROM Account                                
+		LIMIT 5`;//${where}       
         org.query({query: q}, (err, resp) => {            
             if (err) {               
                 reject("An error as occurred");            
