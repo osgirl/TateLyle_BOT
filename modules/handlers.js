@@ -12,7 +12,7 @@ exports.hi = (sender) => {
 };
 
 exports.help = (sender) => {
-    messenger.send({text: `You can ask me questions like "Survey Ticket 1234", "Ticket 1234"`}, sender);
+    messenger.send({text: `You can ask me questions like "CSAT1234"`}, sender);
 };
 
 exports.answerSurvey = (sender, values) => {        
