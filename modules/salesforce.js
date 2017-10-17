@@ -27,7 +27,7 @@ let login = () => {
 
 let createSurvey = (answers, customerName, customerId, addCom) => {
     return new Promise((resolve, reject) => {
-	if(addCom == 1){
+	//if(addCom == 1){
             let c = nforce.createSObject('Quiz__c');
 	    c.set('facebook_username__c', customerName);
 	    c.set('TAL_Question_1__c', answers[1]);
@@ -46,7 +46,7 @@ let createSurvey = (answers, customerName, customerId, addCom) => {
                     resolve(c);
                 }
             });
-	}
+	//}
     });
 };
 
