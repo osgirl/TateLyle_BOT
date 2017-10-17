@@ -1,5 +1,4 @@
 hi hi
 help help
-addCommentsText Com: (.*)
 answerSurvey Ticket (.*)
 saveValues (.*)
