@@ -161,7 +161,7 @@ exports.formatLocations = location => {
     location.forEach(location => {            
         elements.push({                
             title: location.get("Name"),                
-            subtitle: `${location.get("BillingCity")}`
+            subtitle: `${location.get("HEB_City__c")}`
             /*"image_url": sucursal.get("HEB_Front_Picture__c"),
             "buttons":[{
                 "type":"web_url",
