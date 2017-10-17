@@ -28,7 +28,7 @@ exports.addCommentsText = (sender, values) => { 
 
 exports.saveValues = (sender, values) => { 
     messenger.send({text: `Value ${values[1]}`}, sender);  
-    if(postbacks.questionNum == 1){
+    if(postbacks.questionNum() == 1){
         messenger.send({text: `Question 1`}, sender);  
     } else if(postbacks.questionNum == 2){
     }
