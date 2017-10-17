@@ -1,6 +1,6 @@
 hi hi
 help help
-answerSurvey Ticket (.*)
+answerSurvey inc(.*)
 saveValues (.*)
 serchLocation in (.*)
-serchLocation Locations
+serchLocation locations
