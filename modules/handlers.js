@@ -26,7 +26,7 @@ exports.saveValues = (sender, values) => { 
 
 exports.serchLocation = (sender) => {
     messenger.send({text: `Locations:`}, sender);
-    salesforce.findLocations().then(locations => {               
+    salesforce.findLocations().then(location => {               
         messenger.send(formatter.formatLocations(), sender);        
     });
 };
