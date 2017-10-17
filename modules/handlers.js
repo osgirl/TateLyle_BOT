@@ -26,7 +26,7 @@ exports.addCommentsText = (sender, values) => { 
     });
 };
 
-exports.nextQuestion = (sender, values) => { 
+exports.saveValues = (sender, values) => { 
     messenger.send({text: `Value ${values[1]}`}, sender); 
     postbacks.nextQuestion(sender, values);
 };
