@@ -7,7 +7,6 @@ let salesforce = require('./salesforce'),
 let global_variable = [];
 let actOption = 0;
 let questionNum = 0;
-//let addComments = 0;
 
 exports.actOptions = (sender, values) => {
     if(actOption == 1){
@@ -51,9 +50,8 @@ exports.nextQuestion = (sender, values) => {
 exports.endQuiz = (sender, values) => { 
     global_variable[6] = values[1];  
     messenger.getUserInfo(sender).then(response => { 
-        salesforce.createSurvey(global_variable, response.first_name + " " + response.last_name, sender, addComments).then(() => { 
+        salesforce.createSurvey(global_variable, response.first_name + " " + response.last_name, sender).then(() => { 
 	     messenger.send({text: `Thank you for answering our survey. Your comments are very much appreciated.`}, sender); 
-	     //addComments = 0;
 	     actOption = 0;
 	     questionNum = 0;
 	}); 
