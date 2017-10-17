@@ -20,12 +20,6 @@ exports.answerSurvey = (sender, values) => {       
     messenger.send(formatter.start_Question(), sender); 
 };
 
-/*exports.addCommentsText = (sender, values) => { 
-    messenger.getUserInfo(sender).then(response => {
-        postbacks.end_quiz(sender, values);
-    });
-};*/
-
 exports.saveValues = (sender, values) => { 
     postbacks.actOptions(sender, values);
 };
