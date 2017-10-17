@@ -67,7 +67,7 @@ let findLocations = (params) => {
                 //HEB_Front_Picture__c,
                 HEB_Location__c,
 		HEB_City__c
-                FROM Account                                
+                FROM Account                                 
 		LIMIT 5`;//${where}       
         org.query({query: q}, (err, resp) => {            
             if (err) {               
