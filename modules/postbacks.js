@@ -46,7 +46,7 @@ exports.nextQuestion = (sender, values) => {
 	questionNum = 7;
 	messenger.send(formatter.add_Comments(), sender);
     } else if(questionNum == 7){
-	this.endQuiz(sender, values[1]);
+	this.endQuiz(sender, values);
     }
 }
 
