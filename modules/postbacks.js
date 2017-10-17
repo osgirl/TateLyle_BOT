@@ -10,7 +10,7 @@ let questionNum = 0;
 let addComments = 0;
 
 exports.actOptions = (sender, values) => {
-    if(actOption = 1){
+    if(actOption == 1){
         nextQuestion(sender, values);
     }
 };
