@@ -165,7 +165,7 @@ exports.formatLocations = location => {
             //"image_url": sucursal.get("HEB_Front_Picture__c"),
             "buttons":[{
                 "type":"web_url",
-                "url": sucursal.get("HEB_Location__c"),
+                "url": location.get("HEB_Location__c"),
                 "title":"View Location",
                 "webview_height_ratio": "compact"
             }]
