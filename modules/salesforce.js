@@ -64,7 +64,7 @@ let findLocations = (params) => {
 		BillingCity,
 		BillingStreet,
 		Phone,
-                HEB_Front_Picture__c,
+                //HEB_Front_Picture__c,
                 HEB_Location__c,
 		HEB_City__c
                 FROM Account                
