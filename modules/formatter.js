@@ -162,7 +162,7 @@ exports.formatLocations = location => {
         elements.push({                
             title: location.get("Name"),                
             subtitle: `${location.get("BillingCity")}`,
-            "image_url": sucursal.get("HEB_Front_Picture__c"),
+            "image_url": location.get("HEB_Front_Picture__c"),
             "buttons":[{
                 "type":"web_url",
                 "url": location.get("HEB_Location__c"),
