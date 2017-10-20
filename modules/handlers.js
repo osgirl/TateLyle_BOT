@@ -12,7 +12,7 @@ exports.hi = (sender) => {
 };
 
 exports.help = (sender) => {
-    messenger.send({text: `You can ask me questions like "INC1234", "Location in Europe" and "Locations"`}, sender);
+    messenger.send({text: `You can ask me questions like "INC1234", "Location in United Kingdom" and "Locations"`}, sender);
 };
 
 exports.answerSurvey = (sender, values) => {        
