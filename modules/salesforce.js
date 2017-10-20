@@ -58,8 +58,9 @@ let findLocations = (params) => {
             where = "WHERE " + parts.join(' AND ');
         }
     } 
-    return new Promise((resolve, reject) => {        
-        let q = `SELECT id,                    
+    return new Promise((resolve, reject) => {
+	if(where != ""){
+            let q = `SELECT id,                    
                 Name,
                 BillingCity,
                 BillingStreet,
@@ -69,7 +70,20 @@ let findLocations = (params) => {
                 HEB_City__c
                 FROM Account                
                 ${where}
-                LIMIT 5`;       
+                LIMIT 5`;
+	} else {
+	    let q = `SELECT id,                    
+                Name,
+                BillingCity,
+                BillingStreet,
+		Phone,
+                HEB_Front_Picture__c,
+                HEB_Location__c,
+                HEB_City__c
+                FROM Account 
+		WHERE Industry =: 'Other'
+                LIMIT 5`;
+	}
         org.query({query: q}, (err, resp) => {            
             if (err) {               
                 reject("An error as occurred");            
