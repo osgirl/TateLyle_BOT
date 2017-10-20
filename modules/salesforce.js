@@ -69,7 +69,7 @@ let findLocations = (params) => {
                 HEB_City__c
                 FROM Account  
 		WHERE Industry = 'Other'
-		LIMIT 5`;//${where}   	       
+		${where};  	       
         org.query({query: q}, (err, resp) => {            
             if (err) {               
                 reject("An error as occurred");            
