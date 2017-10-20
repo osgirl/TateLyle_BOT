@@ -49,41 +49,18 @@ let createSurvey = (answers, customerName, customerId) => {
 };
 
 let findLocations = (params) => {   
-    let where = "";
-    if(params){
-        let parts = [];
-        //if(params.id) parts.push(`id='${params.id}'`);
-        if(params.city) parts.push(`Billingcity='${params.city}'`);
-        if(parts.length>0){
-            where = "WHERE " + parts.join(' AND ');
-        }
-    } 
     return new Promise((resolve, reject) => {
-	if(where != ""){
-            let q = `SELECT id,                    
-                Name,
-                BillingCity,
-                BillingStreet,
-		Phone,
-                HEB_Front_Picture__c,
-                HEB_Location__c,
-                HEB_City__c
-                FROM Account     
-		WHERE Industry =: 'Other'
-                LIMIT 5`;
-	} else {
-	    let q = `SELECT id,                    
-                Name,
-                BillingCity,
-                BillingStreet,
-		Phone,
-                HEB_Front_Picture__c,
-                HEB_Location__c,
-                HEB_City__c
-                FROM Account 
-		${where}
-                LIMIT 5`;
-	}
+        let q = `SELECT id,                    
+            Name,
+            BillingCity,
+            BillingStreet,
+            Phone,
+            HEB_Front_Picture__c,
+            HEB_Location__c,
+            HEB_City__c
+            FROM Account     
+            WHERE Industry =: 'Other'
+            LIMIT 5`;
         org.query({query: q}, (err, resp) => {            
             if (err) {               
                 reject("An error as occurred");            
@@ -94,8 +71,41 @@ let findLocations = (params) => {
     });
 };
 
+let findLocationsEsp = (params) => {   
+    let where = "";
+    if(params){
+        let parts = [];
+        if(params.city) parts.push(`Billingcity='${params.city}'`);
+        if(parts.length>0){
+            where = "WHERE " + parts.join(' AND ');
+        }
+    } 
+    return new Promise((resolve, reject) => {
+	let q = `SELECT id,                    
+            Name,
+            BillingCity,
+            BillingStreet,
+            Phone,
+            HEB_Front_Picture__c,
+            HEB_Location__c,
+            HEB_City__c
+            FROM Account 
+            ${where}
+            LIMIT 5`;
+        org.query({query: q}, (err, resp) => {            
+            if (err) {               
+                reject("An error as occurred");            
+            } else {               
+                resolve(resp.records);            
+            }        
+        });    
+    });
+};
+
+
 login();
 
 exports.org = org;
 exports.createSurvey = createSurvey;
 exports.findLocations = findLocations;
+exports.findLocationsEsp = findLocationsEsp;
