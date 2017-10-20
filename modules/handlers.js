@@ -33,4 +33,7 @@ exports.serchLocation = (sender) => {
 
 exports.serchEspLocation = (sender, values) => {
     messenger.send({text: `Locations in ${values[1]}`}, sender);
+    salesforce.findLocations().then(location => {               
+        messenger.send(formatter.formatLocations(location), sender);        
+    });
 };
