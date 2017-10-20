@@ -59,7 +59,7 @@ let findLocations = (params) => {
             HEB_Location__c,
             HEB_City__c
             FROM Account     
-            WHERE Industry =: 'Other'
+            WHERE Industry = 'Other'
             LIMIT 5`;
         org.query({query: q}, (err, resp) => {            
             if (err) {               
