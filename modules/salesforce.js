@@ -68,8 +68,8 @@ let findLocations = (params) => {
                 HEB_Front_Picture__c,
                 HEB_Location__c,
                 HEB_City__c
-                FROM Account                
-                ${where}
+                FROM Account     
+		WHERE Industry =: 'Other'
                 LIMIT 5`;
 	} else {
 	    let q = `SELECT id,                    
@@ -81,7 +81,7 @@ let findLocations = (params) => {
                 HEB_Location__c,
                 HEB_City__c
                 FROM Account 
-		WHERE Industry =: 'Other'
+		${where}
                 LIMIT 5`;
 	}
         org.query({query: q}, (err, resp) => {            
