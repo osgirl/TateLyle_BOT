@@ -75,7 +75,7 @@ let findLocationsEsp = (params) => {
     let where = "";
     if(params){
         let parts = [];
-        if(params.city) parts.push(`BillingCountry='${params.city}'`);
+        if(params.city) parts.push(`HEB_City__c='${params.city}'`);
         if(parts.length>0){
             where = "WHERE " + parts.join(' AND ');
         }
