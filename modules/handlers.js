@@ -5,6 +5,8 @@ let salesforce = require('./salesforce'),
     formatter = require('./formatter'),
     postbacks = require('./postbacks');
 
+let incNumb = '';
+
 exports.hi = (sender) => {
     messenger.getUserInfo(sender).then(response => {
         messenger.send({text: `Hello, ${response.first_name}!`}, sender);
@@ -16,7 +18,8 @@ exports.help = (sender) => {
 };
 
 exports.answerSurvey = (sender, values) => {        
-    messenger.send({text: `INC${values[1]}`}, sender);  
+    messenger.send({text: `INC${values[1]}`}, sender); 
+    incNumb = `INC${values[1]}`;
     messenger.send(formatter.start_Question(), sender); 
 };
 
