@@ -37,6 +37,7 @@ let createSurvey = (answers, customerName, customerId) => {
     	if(answers[6] != ''){
     	    c.set('TAL_Question_6__c', answers[6]);
         }
+	c.set('TAL_Incident_Number__c', answers[7]);    
         org.insert({sobject: c}, err => {
             if(err){
                 console.error(err);
