@@ -24,7 +24,7 @@ exports.answerSurvey = (sender, values) => {       
 };
 
 exports.saveValues = (sender, values) => { 
-    values[2] = incNumb:
+    values[2] = incNumb[0];
     postbacks.actOptions(sender, values);
 };
 
