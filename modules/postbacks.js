@@ -6,7 +6,6 @@ let salesforce = require('./salesforce'),
 
 let global_variable = [];
 let actOption = 0;
-let incNumb = '';
 let questionNum = 0;
 
 exports.actOptions = (sender, values) => {
