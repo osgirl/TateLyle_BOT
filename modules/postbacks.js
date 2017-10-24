@@ -6,6 +6,7 @@ let salesforce = require('./salesforce'),
 
 let global_variable = [];
 let actOption = 0;
+let incNumb = '';
 let questionNum = 0;
 
 exports.actOptions = (sender, values) => {
@@ -46,6 +47,7 @@ exports.nextQuestion = (sender, values) => {
 	questionNum = 7;
 	messenger.send(formatter.add_Comments(), sender);
     } else if(questionNum == 7){
+	global_variable[7] = values[2];
 	this.endQuiz(sender, values[1]);
     }
 }
